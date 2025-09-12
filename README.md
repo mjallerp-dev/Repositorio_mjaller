@@ -1,6 +1,6 @@
 # Repositorio_mjaller
  
- Hi, everyone
+ Hi, everyone\n
  My name is Miguel Jaller
  I'm from Cartagena, Colombia
  I'm a student of Software Engineering
