@@ -1,2 +1,8 @@
 # Repositorio_mjaller
-Repositorio 1 - Programación Orientada a Objetos
+ 
+ Hi, everyone
+ My name is Miguel Jaller
+ I'm from Cartagena, Colombia
+ I'm a student of Software Engineering
+ I'm 26 years old
+
