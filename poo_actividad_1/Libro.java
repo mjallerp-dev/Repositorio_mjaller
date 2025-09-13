@@ -19,4 +19,28 @@ public class Libro{
         this.autor = autor;
         this.numeroPaginas = numeroPaginas;
     }
+
+    //Metodo set
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+    public void setNumeroPaginas(int numeroPaginas) {
+        this.numeroPaginas = numeroPaginas;
+    }
+
+    //Metodo get
+
+    public String getTitulo() {
+        return this.titulo;
+    }
+    public String getAutor() {
+        return this.autor;
+    }
+    public int getNumeroPaginas() {
+        return this.numeroPaginas;
+    }
 }
