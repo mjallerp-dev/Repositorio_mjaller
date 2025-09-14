@@ -23,7 +23,6 @@ public class CuentaBancaria {
             this.numeroCuenta = "000000000";
         } else {
             this.numeroCuenta = numeroCuenta;
-        this.saldo = 0.0; //El saldo se inicializa en 0
         }
         if (tipoCuenta == null || tipoCuenta.trim().isEmpty()) { //Se comprueba si la variable es nula o vacia
             System.out.println("Tipo de cuenta no especificado, se asignará 'Desconocido'\n");
