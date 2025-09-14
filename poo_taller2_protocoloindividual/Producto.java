@@ -13,6 +13,7 @@ public class Producto {
         System.out.println("""
 
         Detalles del producto:
+        
         Nombre: %s
         Precio: %s
 
