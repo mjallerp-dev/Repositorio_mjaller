@@ -14,22 +14,27 @@ public class Main {
         String autor = sc.nextLine();
         System.out.println("Número de páginas: ");
         int numeroPaginas = sc.nextInt();
+        sc.nextLine();
         Libro libro1 = new Libro(titulo,autor,numeroPaginas);
         Libro libro2 = new Libro("Cien años de soledad","Gabriel Garcia Marquez",471);
         Libro libro3 = new Libro();
 
         //Objeto de clase CuentaBancaria
-        System.out.println("\nIngrese datos de la cuenta bancaria:");
-        System.out.print("Número de cuenta: ");
+        System.out.println("Ingrese datos de la cuenta bancaria: ");
+        System.out.println("Número de cuenta (9 dígitos):");
         String numeroCuenta = sc.nextLine();
+            while (numeroCuenta.length() !=9) {
+                System.out.println("El numero de dígitos es inválido, por favor ingrese los 9 dígitos");
+                numeroCuenta = sc.nextLine();
+            }
         System.out.print("Saldo: ");
         double saldo = sc.nextDouble();
         sc.nextLine();
         System.out.print("Tipo de cuenta: ");
         String tipoCuenta = sc.nextLine();
-        CuentaBancaria cuenta2 = new CuentaBancaria();
-        CuentaBancaria cuenta3 = new CuentaBancaria(numeroCuenta,tipoCuenta);
-        CuentaBancaria cuenta1 = new CuentaBancaria(numeroCuenta, saldo, "Ahorros");
+        CuentaBancaria cuenta1 = new CuentaBancaria();
+        CuentaBancaria cuenta2 = new CuentaBancaria(numeroCuenta,tipoCuenta);
+        CuentaBancaria cuenta3 = new CuentaBancaria(numeroCuenta, saldo, "Ahorros");
 
         //Objeto de clase Estudiante
         System.out.println("\nIngrese datos del estudiante:");
