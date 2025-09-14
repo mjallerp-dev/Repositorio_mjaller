@@ -73,7 +73,8 @@ public class Libro{
         contadorlibros+=1;
         System.out.println(
             //Uso los metodos get para obtener los valores de los atributos
-            "Libro Numero: " + contadorlibros + "\n" +
+            "Libro Numero " + contadorlibros + ":\n" +
+            "\n" +
             "Título: " + getTitulo() + "\n" +
             "Autor: " + getAutor() + "\n" +
             "Número de páginas: " + getNumeroPaginas() + "\n"
