@@ -54,4 +54,48 @@ public class CuentaBancaria {
         }
     }
 
+    //4. Metodos get y set
+
+    public String getNumeroCuenta() {
+        return numeroCuenta;
+    }
+    public void setNumeroCuenta(String numeroCuenta) {
+        this.numeroCuenta = numeroCuenta;
+    }
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+    public String getTipoCuenta() {
+        return tipoCuenta;
+    }
+    public void setTipoCuenta(String tipoCuenta) {
+        this.tipoCuenta = tipoCuenta;
+    }
+
+    //Metodos mostrarDatos
+    public void mostrarDatos() {
+        System.out.println("Número de cuenta: " + getNumeroCuenta() + "\n" +
+        "Saldo: " + getSaldo() + "\n" +
+        "Tipo de cuenta: " + getTipoCuenta() + "\n");    
+    }
+
+    public static void main(String[] args) {
+        
+        CuentaBancaria cuenta1 = new CuentaBancaria();
+        cuenta1.mostrarDatos();
+
+        CuentaBancaria cuenta2 = new CuentaBancaria("987654321", "Corriente");
+        cuenta2.mostrarDatos();
+
+        CuentaBancaria cuenta3 = new CuentaBancaria("456789123", 1234567.89, "Ahorros");
+        cuenta3.mostrarDatos();
+    }
+
+
+
+
 }
