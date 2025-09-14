@@ -23,7 +23,7 @@ public class Main {
         System.out.println("\nDatos recibidos correctamente");
 
         //Objeto de clase CuentaBancaria
-        System.out.println("\nIngrese datos de la cuenta bancaria: ");
+        System.out.println("\nIngrese datos de su cuenta bancaria: ");
         System.out.print("\nNúmero de cuenta (9 dígitos):");
         String numeroCuenta = sc.nextLine();
             while (numeroCuenta.length() !=9) {
@@ -47,8 +47,7 @@ public class Main {
         String titulo = sc.nextLine();
         System.out.print("Autor: ");
         String autor = sc.nextLine();
-        double valorlibro = 10000;
-        System.out.println("Valor a paagar :" + valorlibro);      
+        double valorlibro = 10000;    
         int numeroPaginas;
         while (true) { 
         System.out.print("Número de páginas (Edición): ");
@@ -60,6 +59,7 @@ public class Main {
                     System.out.println("Debe ingresar un número válido.");
                  }
                 }
+        System.out.println("Valor a pagar :" + valorlibro);  
         Libro libro1 = new Libro(titulo,autor,numeroPaginas);
         Libro libro2 = new Libro("Viaje al Centro de la Tierra","Julio Verne",1200);
         Libro libro3 = new Libro();
