@@ -6,6 +6,8 @@ public class Estudiante {
     private int edad;
     private String curso;
 
+    public static int contador = 0;
+
     //1. Constructor por defecto
     public Estudiante() {
         this.nombre = "Juan Pérez";
@@ -62,25 +64,39 @@ public class Estudiante {
     }
 
     //Metodos para mostrar datos
+
     public void mostrarDatos() {
+        contador+=1;
         System.out.println(
+        "Datos del Estudiante " + contador + ":\n" +
+        "\n" +
         "Nombre: " + getNombre() + "\n" +
         "Edad: " + getEdad() + "\n" +
         "Curso: " + getCurso() + "\n");
     }
 
     public static void main(String[] args) {
-        //Usando un Array de objetos para probar los constructores
-        Estudiante[] estudiantes = {
-            new Estudiante(),
-            new Estudiante("Miguel Jaller", 26),
-            new Estudiante("", 3, ""),
-            new Estudiante("Luis Martínez", 19, "12º Grado")
-        };
+        Estudiante estudiante1 = new Estudiante();
+        Estudiante estudiante2 = new Estudiante("Miguel Jaller", 26);
+        Estudiante estudiante3 = new Estudiante("Jorge Rodriguez", 18,"");
+        Estudiante estudiante4 = new Estudiante("Luis Martínez", 19, "12º Grado");
+        
+        estudiante1.mostrarDatos();
+        estudiante2.mostrarDatos();
+        estudiante3.mostrarDatos();
+        estudiante4.mostrarDatos();
 
-        for (Estudiante estudiante : estudiantes) {
-            estudiante.mostrarDatos();
-        }
+        estudiante1.setEdad(17);
+        estudiante2.setNombre("Angel Piñeres");
+        estudiante3.setEdad(27);
+        estudiante3.setNombre("Samuel Gutierrez");
+        estudiante4.setCurso("6º Grado");
+        estudiante4.setEdad(16);
+
+        estudiante1.mostrarDatos();
+        estudiante2.mostrarDatos();
+        estudiante3.mostrarDatos();
+        estudiante4.mostrarDatos();
 
     }
 }
