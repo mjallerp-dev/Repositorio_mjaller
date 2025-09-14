@@ -65,39 +65,14 @@ public class Estudiante {
 
     //Metodos para mostrar datos
 
-    public void mostrarDatos() {
+    @Override
+    public String toString() {
         contador+=1;
-        System.out.println(
-        "Datos del Estudiante " + contador + ":\n" +
-        "\n" +
-        "Nombre: " + getNombre() + "\n" +
-        "Edad: " + getEdad() + "\n" +
-        "Curso: " + getCurso() + "\n");
-    }
-
-    public static void main(String[] args) {
-
-        //Usando una lista de objetos Estudiante
-        Estudiante [] estudiantes = {
-            new Estudiante(),
-            new Estudiante("Miguel Jaller", 26),
-            new Estudiante("Jorge Rodriguez", 18,""),
-            new Estudiante("Luis Martínez", 19, "12º Grado"),
-        };
-
-        for (Estudiante e: estudiantes) {
-            e.mostrarDatos();
-        }
-
-        estudiantes[0].setEdad(17);
-        estudiantes[1].setNombre("Angel Piñeres");
-        estudiantes[2].setEdad(27);
-        estudiantes[2].setNombre("Samuel Gutierrez");
-        estudiantes[3].setCurso("6º Grado");
-        estudiantes[3].setEdad(16);
-
-        for (Estudiante e: estudiantes) {
-            e.mostrarDatos();
-        }
+        return
+            "Datos del Estudiante " + contador + ":\n" +
+            "\n" +
+            "Nombre: " + getNombre() + "\n" +
+            "Edad: " + getEdad() + "\n" +
+            "Curso: " + getCurso() + "\n";
     }
 }
