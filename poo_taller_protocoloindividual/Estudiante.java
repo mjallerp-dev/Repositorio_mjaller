@@ -21,24 +21,66 @@ public class Estudiante {
         } else {
             this.nombre = nombre;
         }
-        if (edad <= 4) {
-            System.out.println("Edad no válida, se asignará '5' por defecto\n");
-            this.edad = 5;
+        if (edad <= 1) {
+            System.out.println("Edad no válida, se asignará '1' por defecto\n");
+            this.edad = 1;
         } else {
             this.edad = edad;
         }
+        this.curso = "Cuso Desconocido"; // Curso por defecto
     }
 
     //3. Constructor con todos los parametros y uso de this()
     public Estudiante(String nombre, int edad, String curso) {
-    this(nombre, edad); // Llama al constructor anterior
+        this(nombre, edad); // Llama al constructor anterior
         if (curso == null || curso.trim().isEmpty()) {
             System.out.println("Curso no especificado, se asignará 'Curso Desconocido'\n");
             this.curso = "Curso Desconocido";
         } else {
-            this.curso = curso;
+        this.curso = curso;
         }
-    this.curso = curso;
     }
 
+    //4. Metodos get y set
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public int getEdad() {
+        return edad;
+    }
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+    public String getCurso() {
+        return curso;
+    }
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
+    //Metodos para mostrar datos
+    public void mostrarDatos() {
+        System.out.println(
+        "Nombre: " + getNombre() + "\n" +
+        "Edad: " + getEdad() + "\n" +
+        "Curso: " + getCurso() + "\n");
+    }
+
+    public static void main(String[] args) {
+        //Usando un Array de objetos para probar los constructores
+        Estudiante[] estudiantes = {
+            new Estudiante(),
+            new Estudiante("Miguel Jaller", 26),
+            new Estudiante("", 3, ""),
+            new Estudiante("Luis Martínez", 19, "12º Grado")
+        };
+
+        for (Estudiante estudiante : estudiantes) {
+            estudiante.mostrarDatos();
+        }
+
+    }
 }
