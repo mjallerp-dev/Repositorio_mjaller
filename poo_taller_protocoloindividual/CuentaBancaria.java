@@ -40,9 +40,9 @@ public class CuentaBancaria {
         this.numeroCuenta = numeroCuenta;
         //Validaciones
          
-        if (saldo < 0) { //Se comprueba si el saldo es negativo
+        if (saldo < 0.0) { //Se comprueba si el saldo es negativo
             System.out.println("Saldo no válido, se asignará 0 por defecto\n");
-            this.saldo = 0;
+            this.saldo = 0.0;
         } else {
             this.saldo = saldo;
         }
@@ -81,7 +81,7 @@ public class CuentaBancaria {
     public String toString() {
         return
             "Número de cuenta: " + getNumeroCuenta() + "\n" +
-            "Saldo: " + getSaldo() + "\n" +
-            "Tipo de cuenta: " + getTipoCuenta() + "\n";    
+            "Saldo actual: " + getSaldo() + "\n" +
+            "Tipo de cuenta: " + getTipoCuenta() + "\n";
     }
 }
