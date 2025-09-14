@@ -19,5 +19,4 @@ public class Producto {
 
         """.formatted(nombre, precio));
     }
-
 }
