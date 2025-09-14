@@ -76,27 +76,28 @@ public class Estudiante {
     }
 
     public static void main(String[] args) {
-        Estudiante estudiante1 = new Estudiante();
-        Estudiante estudiante2 = new Estudiante("Miguel Jaller", 26);
-        Estudiante estudiante3 = new Estudiante("Jorge Rodriguez", 18,"");
-        Estudiante estudiante4 = new Estudiante("Luis Martínez", 19, "12º Grado");
-        
-        estudiante1.mostrarDatos();
-        estudiante2.mostrarDatos();
-        estudiante3.mostrarDatos();
-        estudiante4.mostrarDatos();
 
-        estudiante1.setEdad(17);
-        estudiante2.setNombre("Angel Piñeres");
-        estudiante3.setEdad(27);
-        estudiante3.setNombre("Samuel Gutierrez");
-        estudiante4.setCurso("6º Grado");
-        estudiante4.setEdad(16);
+        //Usando una lista de objetos Estudiante
+        Estudiante [] estudiantes = {
+            new Estudiante(),
+            new Estudiante("Miguel Jaller", 26),
+            new Estudiante("Jorge Rodriguez", 18,""),
+            new Estudiante("Luis Martínez", 19, "12º Grado"),
+        };
 
-        estudiante1.mostrarDatos();
-        estudiante2.mostrarDatos();
-        estudiante3.mostrarDatos();
-        estudiante4.mostrarDatos();
+        for (Estudiante e: estudiantes) {
+            e.mostrarDatos();
+        }
 
+        estudiantes[0].setEdad(17);
+        estudiantes[1].setNombre("Angel Piñeres");
+        estudiantes[2].setEdad(27);
+        estudiantes[2].setNombre("Samuel Gutierrez");
+        estudiantes[3].setCurso("6º Grado");
+        estudiantes[3].setEdad(16);
+
+        for (Estudiante e: estudiantes) {
+            e.mostrarDatos();
+        }
     }
 }
