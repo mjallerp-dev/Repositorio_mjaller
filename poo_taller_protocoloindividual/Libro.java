@@ -7,7 +7,6 @@ public class Libro{
     private int numeroPaginas;
 
     //Este es un contador estatico para llevar la cuenta de los libros creados
-    private static int contadorlibros = 0;
 
     //1. Constructor por defecto
     public Libro() {
@@ -66,7 +65,6 @@ public class Libro{
 
     @Override
     public String toString() {
-        contadorlibros+=1;
         return 
             "Título del Libro: " + getTitulo() + "\n" +
             "Autor: " + getAutor() + "\n" +
