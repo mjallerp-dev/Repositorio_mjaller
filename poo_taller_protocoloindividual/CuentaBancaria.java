@@ -78,7 +78,8 @@ public class CuentaBancaria {
 
     //Metodos mostrarDatos
     public void mostrarDatos() {
-        System.out.println("Número de cuenta: " + getNumeroCuenta() + "\n" +
+        System.out.println(
+        "Número de cuenta: " + getNumeroCuenta() + "\n" +
         "Saldo: " + getSaldo() + "\n" +
         "Tipo de cuenta: " + getTipoCuenta() + "\n");    
     }
@@ -86,12 +87,25 @@ public class CuentaBancaria {
     public static void main(String[] args) {
         
         CuentaBancaria cuenta1 = new CuentaBancaria();
+        CuentaBancaria cuenta2 = new CuentaBancaria("987654321", "Corriente");
+        CuentaBancaria cuenta3 = new CuentaBancaria("456789123", 1234567.89, "Ahorros");
+
+        cuenta1.mostrarDatos();
+        cuenta2.mostrarDatos();
+        cuenta3.mostrarDatos();
+
+        cuenta1.setSaldo(1423000.50);
+        System.out.println("Saldo actualizado: " + cuenta3.getSaldo() + "\n");
         cuenta1.mostrarDatos();
 
-        CuentaBancaria cuenta2 = new CuentaBancaria("987654321", "Corriente");
+        cuenta2.setTipoCuenta("Ahorros");
+        System.out.println("Tipo de cuenta actualizado: " + cuenta2.getTipoCuenta() + "\n");
         cuenta2.mostrarDatos();
 
-        CuentaBancaria cuenta3 = new CuentaBancaria("456789123", 1234567.89, "Ahorros");
+        cuenta3.setNumeroCuenta("321654987");
+        cuenta3.setSaldo(1023000.50);
+        cuenta3.setTipoCuenta("Corriente");
+        System.out.println("Datos actualizados: \n");
         cuenta3.mostrarDatos();
     }
 
