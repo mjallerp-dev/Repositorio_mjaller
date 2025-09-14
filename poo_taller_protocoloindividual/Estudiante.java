@@ -4,7 +4,7 @@ public class Estudiante {
     //Propiedades
     private String nombre;
     private int edad;
-    private String curso;
+    private int curso;
 
     public static int contador = 0;
 
@@ -12,7 +12,7 @@ public class Estudiante {
     public Estudiante() {
         this.nombre = "Juan Pérez";
         this.edad = 20;
-        this.curso = "10º Grado";
+        this.curso = 10;
     }
 
     //2. Constructor parametrizado con 2 parametros (nombre, edad)
@@ -29,17 +29,17 @@ public class Estudiante {
         } else {
             this.edad = edad;
         }
-        this.curso = "Cuso Desconocido"; // Curso por defecto
+        this.curso = 1; // Curso por defecto
     }
 
     //3. Constructor con todos los parametros y uso de this()
-    public Estudiante(String nombre, int edad, String curso) {
+    public Estudiante(String nombre, int edad, int curso) {
         this(nombre, edad); // Llama al constructor anterior
-        if (curso == null || curso.trim().isEmpty()) {
-            System.out.println("Curso no especificado, se asignará 'Curso Desconocido'\n");
-            this.curso = "Curso Desconocido";
+        if (curso < 0 || curso > 11) {
+            System.out.println("Curso no válido, se asignará '1' por defecto\n");
+            this.curso = 1;
         } else {
-        this.curso = curso;
+            this.curso = curso;
         }
     }
 
@@ -56,10 +56,10 @@ public class Estudiante {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-    public String getCurso() {
+    public int getCurso() {
         return curso;
     }
-    public void setCurso(String curso) {
+    public void setCurso(int curso) {
         this.curso = curso;
     }
 
@@ -69,10 +69,8 @@ public class Estudiante {
     public String toString() {
         contador+=1;
         return
-            "Datos del Estudiante " + contador + ":\n" +
-            "\n" +
             "Nombre: " + getNombre() + "\n" +
             "Edad: " + getEdad() + "\n" +
-            "Curso: " + getCurso() + "\n";
+            "Curso: " + getCurso() + "º Grado" + "\n";
     }
 }
