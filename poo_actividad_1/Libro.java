@@ -23,6 +23,8 @@ public class Libro{
         this.numeroPaginas = numeroPaginas;
     }
 
+    //3.Metodos
+
     //Metodo set
 
     public void setTitulo(String titulo) {
@@ -50,19 +52,32 @@ public class Libro{
     //Metodo para mostrar la informacion del libro
 
     public void mostrarlibro() {
+        contadorlibros+=1;
         System.out.println(
+            //Uso los metodos get para obtener los valores de los atributos
             "Libro Numero: " + contadorlibros + "\n" +
-            "Título: " + this.titulo + "\n" +
-            "Autor: " + this.autor + "\n" +
-            "Número de páginas: " + this.numeroPaginas + "\n"
+            "Título: " + getTitulo() + "\n" +
+            "Autor: " + getAutor() + "\n" +
+            "Número de páginas: " + getNumeroPaginas() + "\n"
         );
     }    
 
     public static void main(String[] args) {
-        
+
         //Creo un objeto libro usando el constructor por defecto
 
         Libro libro1 = new Libro();
         libro1.mostrarlibro();
+
+        //Creo un objeto libro usando el constructor parametrizado
+        Libro libro2 = new Libro("Viaje al Centro de la Tierra", "Julio Verne", 360);
+        libro2.mostrarlibro();
+
+        //Uso los metodos set para cambiar los atributos del libro2
+        
+        libro2.setTitulo("La vuelta al mundo en 80 días");
+        libro2.setNumeroPaginas(400);
+        libro2.mostrarlibro();
+
     }
 }
