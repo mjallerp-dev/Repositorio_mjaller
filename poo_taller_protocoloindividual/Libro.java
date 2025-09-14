@@ -33,12 +33,7 @@ public class Libro{
         }
         else {this.autor = autor;
         }
-        if (numeroPaginas <= 0){ //Se comprueba si el numero de paginas es menor o igual a 0
-            System.out.println("Número de páginas no válido, se asignará 1 pagina por defecto\n");
-            this.numeroPaginas=1;
-        }
-        else {this.numeroPaginas = numeroPaginas;
-        }
+        this.numeroPaginas = numeroPaginas;
     }
 
     //3.Metodos
@@ -73,9 +68,7 @@ public class Libro{
     public String toString() {
         contadorlibros+=1;
         return 
-            "Libro Numero " + contadorlibros + ":\n" +
-            "\n" +
-            "Título: " + getTitulo() + "\n" +
+            "Título del Libro: " + getTitulo() + "\n" +
             "Autor: " + getAutor() + "\n" +
             "Número de páginas: " + getNumeroPaginas() + "\n";
     
