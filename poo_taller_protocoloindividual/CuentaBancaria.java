@@ -1,4 +1,4 @@
-package repositorio_mjaller.poo_taller1_protocoloindividual;
+package repositorio_mjaller.poo_taller_protocoloindividual;
 
 public class CuentaBancaria {
     //Propiedades
