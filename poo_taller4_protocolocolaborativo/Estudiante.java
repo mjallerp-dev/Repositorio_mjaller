@@ -54,7 +54,7 @@ public class Estudiante {
 
             Nombre: %s
             Edad: %d
-            Nota Promedio: %f
+            Nota Promedio: %.2f
 
             """.formatted(getNombre(),getEdad(),getNotaPromedio()));
     }
