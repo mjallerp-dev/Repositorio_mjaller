@@ -11,7 +11,7 @@ public class PruebaEstudiante {
         e2.mostrarNota();
         e.setEdad(27);
         e2.setEdad(19);
-        System.out.println("Datos actualidados en 2024: ");
+        System.out.println("Datos de los estudiantes en primer corte de 2025: ");
         e.mostrarNota();
         e2.mostrarNota();
         e.setNotaPromedio(3.8f);
