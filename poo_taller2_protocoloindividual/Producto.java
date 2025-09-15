@@ -9,14 +9,21 @@ public class Producto {
         this.precio = precio;
     }
 
+    public String getNombre() {
+        return this.nombre;
+    }
+    public double getPrecio(){
+        return this.precio;
+    }
+
     public void mostrarProducto() {
         System.out.println("""
 
         Detalles del producto:
         
         Nombre: %s
-        Precio: %s
+        Precio: %f
 
-        """.formatted(nombre, precio));
+        """.formatted(getNombre(), getPrecio()));
     }
 }
