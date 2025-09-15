@@ -11,4 +11,37 @@ public class Estudiante {
         this.notaPromedio = notaPromedio;
     }
 
+    public String getNombre(){
+        return this.nombre;
+    }
+    public int getEdad(){
+        return this.edad;
+    }
+    public float getNotaPromedio(){
+        return this.notaPromedio;
+    }
+
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+    public void setEdad(int edad){
+        this.edad = edad;
+    }
+    public void setNotaPromedio(float notaPromedio){
+        this.notaPromedio = notaPromedio;
+    }
+
+    public void mostrarNota(){
+        System.out.println("""
+        
+            Datos del Estudiante:
+
+            Nombre: %s
+            Edad: %d
+            Nota Promedio: %f
+
+            """.formatted(getNombre(),getEdad(),getNotaPromedio()));
+    }
+
+
 }
