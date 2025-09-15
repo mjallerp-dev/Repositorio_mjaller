@@ -2,6 +2,7 @@ package repositorio_mjaller.poo_taller3_protocolocolaborativo;
 
 public class Matemáticas {
 
+
     static int sumar(int a, int b){
         return a + b;
     }
@@ -12,6 +13,11 @@ public class Matemáticas {
         return a * b;
     }
     static double dividir(double a, double b){
-        return a / b;
-    }    
+        if ( b==0) {
+            throw new ArithmeticException("No es posible dividir entre 0");
+        }
+            else {
+                return a / b;
+        }
+    }
 }
