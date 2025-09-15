@@ -16,17 +16,24 @@ public class Estudiante {
         this("Desconocido",1);
     }
 
+    public String getNombre(){
+        return this.nombre;
+    }
+    public int getEdad(){
+        return this.edad;
+    }
+
 
     public void mostrarDatos() {
         System.out.println("""
-
-            Datos del Estudiante:
-
-            Nombre: %s
-            Edad: %s
-
-            """.formatted(nombre, edad));
-    }
+        
+        Datos del Estudiante:
+        
+        Nombre: %s
+        Edad: %d
+        
+        """.formatted(getNombre(), getEdad()));
+        }
 
     //public static void metodoEstatico() {
     //    System.out.println("Nombre del estudiante: " + this.nombre);
@@ -39,15 +46,15 @@ public class Estudiante {
     //Solucion 1: Eliminar 'this' y usar un parametro
 
         public static void metodoEstatico(Estudiante e){
-            System.out.println("Nombre: " + e.nombre);
-            System.out.println("Edad: " + e.edad);
+            System.out.println("Nombre: " + e.getNombre());
+            System.out.println("Edad: " + e.getEdad());
         }
 
     //Solucion 2: Hacer un método no estatico
 
         public void metodoNoEstatico(){
-            System.out.println("Nombre: " + this.nombre);
-            System.out.println("Edad: " + this.edad);
+            System.out.println("Nombre: " + getNombre());
+            System.out.println("Edad: " + getEdad());
         }
 
 }
