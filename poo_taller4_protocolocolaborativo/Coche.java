@@ -24,6 +24,7 @@ public class Coche {
     public void acelerar(int aceleracion){
         if (aceleracion>0){
             this.velocidadMaxima = velocidadMaxima + aceleracion;
+            System.out.println("El Coche ha acelerado: " + aceleracion + "Km/h");
         }
         else{
             System.out.println("La aceleración debe ser positiva.");
@@ -37,7 +38,7 @@ public class Coche {
 
         Marca: %s
         Modelo: %s
-        Velocidad Maxima: %d
+        Velocidad Maxima: %d Km/h
 
         """.formatted(getMarca(),getModelo(),getVelocidadMaxima()));
     }
