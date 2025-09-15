@@ -22,12 +22,28 @@ public class Estudiante {
     }
 
     public void setNombre(String nombre){
-        this.nombre = nombre;
+        if (nombre==null || nombre.trim().isEmpty()){
+            System.out.println("Nombre no especificado o inválido, se le asignará 'Desconocido'");
+            this.nombre = "Desconocido";
+        }
+        else{
+            this.nombre = nombre;
+        }
     }
     public void setEdad(int edad){
+        if (edad<1){
+            System.out.println("Edad no especificada o inválida, se le asignara '1' por defecto");
+            this.edad = 1;
+        }
+        else{
         this.edad = edad;
+        }
     }
     public void setNotaPromedio(float notaPromedio){
+        if (notaPromedio<0.0f){
+            System.out.println("Nota Promedio no especificada o inválida, se le asignará '0.0' por defecto");
+            this.notaPromedio = 0.0f;
+        }
         this.notaPromedio = notaPromedio;
     }
 
