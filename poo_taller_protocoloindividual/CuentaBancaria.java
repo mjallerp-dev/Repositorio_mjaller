@@ -24,9 +24,9 @@ public class CuentaBancaria {
     }
 
     public String getNumeroCuenta() {
-        return numeroCuenta;
+        return this.numeroCuenta;
     }
-        public double getSaldo() {
+    public double getSaldo() {
         return this.saldo;
     }
     public String getTipoCuenta() {
