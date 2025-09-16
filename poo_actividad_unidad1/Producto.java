@@ -1,6 +1,6 @@
 package repositorio_mjaller.poo_actividad_unidad1;
 
-public class Producto {
+class Producto {
     String nombre;   
     double precio;   
     int stock;       
