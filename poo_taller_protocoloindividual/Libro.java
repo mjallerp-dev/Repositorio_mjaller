@@ -38,7 +38,7 @@ public class Libro{
     public void setAutor(String autor) {
         if (autor==null || autor.trim().isEmpty()){
             System.out.println("Autor no especificado, se asignará 'Autor Desconocido'\n");
-            this.autor="Autor Desconocido";
+            this.autor = "Autor Desconocido";
         }
         else {this.autor = autor;
         }
