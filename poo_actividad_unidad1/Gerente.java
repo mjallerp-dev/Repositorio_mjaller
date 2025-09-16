@@ -10,9 +10,17 @@ class Gerente extends Empleado {
 
     @Override
     protected void mostrarInformacion() {
-        System.out.println("Nombre: " + nombre + 
-                           ", Salario: " + salario + 
-                           ", Departamento: " + departamento);
+        System.out.println("\nNombre: " + this.nombre + 
+                           "\nSalario: " + this.salario + 
+                           "\nDepartamento: " + this.departamento);
+    }
+
+    public static void main(String[] args) {
+        
+        Empleado empleado = new Empleado("Miguel", 1423000);
+        Gerente gerente = new Gerente("Angel",2200000,"Ingeniería");
+        empleado.mostrarInformacion();
+        gerente.mostrarInformacion();
     }
 
 }
