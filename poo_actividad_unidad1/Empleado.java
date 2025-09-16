@@ -11,6 +11,7 @@ class Empleado {
     }
 
     protected void mostrarInformacion() {
-        System.out.println("Nombre: " + nombre + ", Salario: " + salario);
+        System.out.println("\nNombre: " + nombre + 
+                        "\nSalario: " + salario);
     }
 }
