@@ -51,7 +51,7 @@ public class Estudiante {
     }
 
     public void setCurso(int curso) {
-        if (curso < 0 || curso > 11) {
+        if (curso <= 0 || curso > 11) {
             System.out.println("Curso no válido, se asignará '1' por defecto\n");
             this.curso = 1;
         } else {
