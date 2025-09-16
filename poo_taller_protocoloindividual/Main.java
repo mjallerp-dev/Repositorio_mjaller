@@ -37,7 +37,7 @@ public class Main {
         String tipoCuenta = sc.nextLine();
         CuentaBancaria cuenta1 = new CuentaBancaria(numeroCuenta,tipoCuenta);
         cuenta1.setSaldo(saldo);
-        CuentaBancaria cuenta2 = new CuentaBancaria(numeroCuenta, saldo, "Ahorros");
+        CuentaBancaria cuenta2 = new CuentaBancaria(numeroCuenta, saldo, tipoCuenta);
         
         System.out.println("\nRecarga Exitosa: " + cuenta1);
 
