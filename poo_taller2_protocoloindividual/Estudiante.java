@@ -4,14 +4,11 @@ public class Estudiante {
     private String nombre;
     private int edad;
 
-    
-    //contructor parametrizado
-    public Estudiante(String nombre, int edad) {
+        public Estudiante(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
     }
 
-    //Contructor por defecto
     public Estudiante() {
         this("Desconocido",1);
     }
@@ -23,6 +20,22 @@ public class Estudiante {
         return this.edad;
     }
 
+    public void setNombre(String nombre) {
+        if (nombre == null || nombre.trim().isEmpty()) {
+            System.out.println("Nombre no especificado, se asignará 'Nombre Desconocido'\n");
+            this.nombre = "Nombre Desconocido";
+        } else {
+            this.nombre = nombre;
+        }
+    }
+    public void setEdad(int edad) {
+        if (edad <= 1) {
+            System.out.println("Edad no válida, se asignará '1' por defecto\n");
+            this.edad = 1;
+        } else {
+            this.edad = edad;
+        }
+    }
 
     public void mostrarDatos() {
         System.out.println("""
