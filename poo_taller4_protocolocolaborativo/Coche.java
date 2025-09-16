@@ -20,6 +20,33 @@ public class Coche {
     public int getVelocidadMaxima(){
         return this.velocidadMaxima;
     }
+    public void setMarca(String marca){
+        if (marca==null || marca.trim().isEmpty()){
+            System.out.println("Marca no especificada o inválida, se le asiganará 'Desconocida' por defecto");
+            this.marca = "Desconocida";
+        }
+        else {this.marca = marca;
+        }
+        
+    }
+    public void setModelo(String modelo){
+        if (marca==null || marca.trim().isEmpty()){
+            System.out.println("Marca no especificada o inválida, se le asiganará 'Desconocida' por defecto");
+            this.marca = "Desconocida";
+        }
+        else {this.modelo = modelo;
+        }
+        
+    }
+    public void setModelo(int velocidadMaxima){
+        if (velocidadMaxima<1){
+            System.out.println("Velocidad Máxima no especificada o inválida, se le asiganará '1' por defecto");
+            this.velocidadMaxima = 1;
+        }
+        else {this.velocidadMaxima = velocidadMaxima;
+        }
+        
+    }
 
     public void acelerar(int aceleracion){
         if (aceleracion>0){
