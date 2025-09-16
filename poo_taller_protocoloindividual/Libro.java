@@ -12,9 +12,24 @@ public class Libro{
     }
 
     public Libro(String titulo,String autor, int numeroPaginas) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.numeroPaginas = numeroPaginas;
+        if (titulo==null || titulo.trim().isEmpty()){ //Se comprueba si la variable es nula o vacia
+            System.out.println("Título no especificado, se asignará 'Título Desconocido'\n");
+            this.titulo="Título Desconocido";
+        }
+        else {this.titulo = titulo;
+        }
+        if (autor==null || autor.trim().isEmpty()){
+            System.out.println("Autor no especificado, se asignará 'Autor Desconocido'\n");
+            this.autor = "Autor Desconocido";
+        }
+        else {this.autor = autor;
+        }
+        if (numeroPaginas<1){
+            System.out.println("Numero de paginas no especificado o inválido, se asignará '1' por defecto\n");
+            this.numeroPaginas = 1;
+        }
+        else {this.numeroPaginas = numeroPaginas;
+        }
     }
 
     public String getTitulo() {
