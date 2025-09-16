@@ -1,5 +1,4 @@
 package repositorio_mjaller.poo_actividad_unidad1;
-
 public class PruebaPersona {
     public static void main(String[] args) {
 
