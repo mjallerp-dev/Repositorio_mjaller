@@ -45,7 +45,8 @@ public class Libro{
     }
     public void setNumeroPaginas(int numeroPaginas) {
         if (numeroPaginas<1){
-            System.out.println("Numero de paginas no especificado o inválido, se asignará 'Paginas desconocidad'\n");
+            System.out.println("Numero de paginas no especificado o inválido, se asignará '1' por defecto\n");
+            this.numeroPaginas = 1;
         }
         else {this.numeroPaginas = numeroPaginas;
         }
