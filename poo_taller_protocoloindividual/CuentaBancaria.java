@@ -12,15 +12,40 @@ public class CuentaBancaria {
     }
 
     public CuentaBancaria(String numeroCuenta, String tipoCuenta) {
-        this.numeroCuenta = numeroCuenta;
+        if (numeroCuenta == null || numeroCuenta.trim().isEmpty()) { //Se comprueba si la variable es nula o vacia
+            System.out.println("Número de cuenta no especificado, se asignará '000000000'\n");
+            this.numeroCuenta = "000000000";
+        } else {
+            this.numeroCuenta = numeroCuenta;
+        }
         this.saldo = 0.0;
-        this.tipoCuenta = tipoCuenta;
+        if (tipoCuenta == null || tipoCuenta.trim().isEmpty()) { //Se comprueba si la variable es nula o vacia
+            System.out.println("Tipo de cuenta no especificado, se asignará 'Desconocido'\n");
+            this.tipoCuenta = "Desconocido";
+        } else {
+            this.tipoCuenta = tipoCuenta;
+        }
     }
 
     public CuentaBancaria(String numeroCuenta, double saldo, String tipoCuenta) {
-        this.numeroCuenta = numeroCuenta;
-        this.saldo = saldo;
-        this.tipoCuenta = tipoCuenta;
+         if (numeroCuenta == null || numeroCuenta.trim().isEmpty()) { //Se comprueba si la variable es nula o vacia
+            System.out.println("Número de cuenta no especificado, se asignará '000000000'\n");
+            this.numeroCuenta = "000000000";
+        } else {
+            this.numeroCuenta = numeroCuenta;
+        }
+        if (saldo < 0.0) { //Se comprueba si el saldo es negativo
+            System.out.println("Saldo no válido, se asignará 0 por defecto\n");
+            this.saldo = 0.0;
+        } else {
+            this.saldo = saldo;
+        }
+        if (tipoCuenta == null || tipoCuenta.trim().isEmpty()) { //Se comprueba si la variable es nula o vacia
+            System.out.println("Tipo de cuenta no especificado, se asignará 'Desconocido'\n");
+            this.tipoCuenta = "Desconocido";
+        } else {
+            this.tipoCuenta = tipoCuenta;
+        }
     }
 
     public String getNumeroCuenta() {
