@@ -16,6 +16,23 @@ public class Producto {
         return this.precio;
     }
 
+    public void setNombre(String nombre) {
+        if (nombre == null || nombre.trim().isEmpty()) {
+            System.out.println("Nombre no especificado, se asignará 'Nombre Desconocido'\n");
+            this.nombre = "Nombre Desconocido";
+        } else {
+            this.nombre = nombre;
+        }
+    }
+    public void setEdad(double precio) {
+        if (precio <= 1.0 ) {
+            System.out.println("Precio no válido, se asignará '1.0' por defecto\n");
+            this.precio = 0.0;
+        } else {
+            this.precio = precio;
+        }
+    }
+
     public void mostrarProducto() {
         System.out.println("""
 
