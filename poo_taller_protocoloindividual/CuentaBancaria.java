@@ -45,7 +45,7 @@ public class CuentaBancaria {
             this.tipoCuenta = "Desconocido";
         } else {
             this.tipoCuenta = tipoCuenta;
-        }
+        }     
     }
 
     public String getNumeroCuenta() {

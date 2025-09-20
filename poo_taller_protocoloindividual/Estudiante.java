@@ -12,9 +12,20 @@ public class Estudiante {
     }
 
     public Estudiante(String nombre, int edad) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.curso = 1; // 
+        if (nombre == null || nombre.trim().isEmpty()) {
+            System.out.println("Nombre no especificado, se asignará 'Nombre Desconocido'\n");
+            this.nombre = "Nombre Desconocido";
+        } else {
+            this.nombre = nombre;
+        }
+
+        if (edad < 1) {
+            System.out.println("Edad no válida, se asignará '1' por defecto\n");
+            this.edad = 1;
+        } else {
+            this.edad = edad;
+        }
+        this.curso = 1; 
     }
 
     public Estudiante(String nombre, int edad, int curso) {
