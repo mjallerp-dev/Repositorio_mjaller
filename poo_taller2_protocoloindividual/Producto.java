@@ -43,4 +43,11 @@ public class Producto {
 
         """.formatted(getNombre(), getPrecio()));
     }
+
+    public static void main(String[] args) {
+        
+        Producto producto1 = new Producto("Lavaloza",28000);
+        producto1.mostrarProducto();
+
+    }
 }
