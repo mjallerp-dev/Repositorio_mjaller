@@ -30,7 +30,12 @@ public class Estudiante {
 
     public Estudiante(String nombre, int edad, int curso) {
         this(nombre, edad);
-        this.curso = curso;
+        if (curso <= 0 || curso > 11) {
+            System.out.println("Curso no válido, se asignará '1' por defecto\n");
+            this.curso = 1;
+        } else {
+            this.curso = curso;
+        }
     }
 
     public String getNombre() {
