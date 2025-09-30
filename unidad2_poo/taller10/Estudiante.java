@@ -7,4 +7,14 @@ public class Estudiante extends Persona {
         super(nombre, edad);
         this.programa = programa;
     }
+
+    public String getPrograma() {
+        return this.programa;
+    }
+
+    @Override
+    public void presentarse() {
+        super.presentarse();
+        System.out.println("Soy estudiante de " + getPrograma() + ".");
+    }
 }
