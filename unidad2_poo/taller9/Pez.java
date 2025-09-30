@@ -18,4 +18,10 @@ public class Pez extends Animal{
         System.out.println("Tipo de Agua: " + getTipoAgua());
     }
 
+    public static void main(String[] args) {
+        Animal animal = new Animal("Mamifero");
+        animal.mostrarEspecie();
+        Pez pez = new Pez("Tiburon", "Agua Salada");
+        pez.mostrarEspecie();
+    }
 }
