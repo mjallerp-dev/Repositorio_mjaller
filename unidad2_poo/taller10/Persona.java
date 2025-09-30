@@ -8,4 +8,15 @@ public class Persona {
         this.nombre = nombre;
         this.edad = edad;
     }
+
+    public String getNombre() {
+        return this.nombre;
+    }
+    public int getEdad() {
+        return this.edad;
+    }
+
+    public void presentarse() {
+        System.out.println("\nHola, mi nombre es " + getNombre() + " y tengo " + getEdad() + " años.");
+    }
 }
