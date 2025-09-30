@@ -35,6 +35,7 @@ public class Producto {
 
     public void mostrarProducto() {
         System.out.println("""
+            
 
         Detalles del producto:
         

@@ -6,6 +6,7 @@ public class Coche {
     static int contadorCoches = 0;
 
     public Coche(String marca, String modelo){
+        contadorCoches+=1;
         this.marca = marca;
         this.modelo = modelo;
     }
@@ -17,14 +18,23 @@ public class Coche {
         return this.modelo;
     }
     public void setMarca(String marca){
-        this.marca = marca;
+        if (marca == null || marca.trim().isEmpty()) {
+            System.out.println("Marca no especificado, se asignará 'marca Desconocido'\n");
+            this.marca = "Marca Desconocida";
+        } else {
+            this.marca = marca;
+        }
     }
     public void setModelo(String modelo){
-        this.modelo = modelo;
+        if (modelo == null ||modelo.trim().isEmpty()) {
+            System.out.println("Modelo no especificado, se asignará 'modelo Desconocido'\n");
+            this.modelo = "Modelo Desconocido";
+        } else {
+            this.modelo = modelo;
+        }
     }
 
     public void mostrarDetalles(){
-        contadorCoches++;
         System.out.println("""
             
             Coche numero %d

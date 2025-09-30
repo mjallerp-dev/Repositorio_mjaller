@@ -67,6 +67,25 @@ public class Libro{
         }
     }
 
+    public void mostrarLibro(){
+        System.out.println("""
+            
+            Detalles del libro:
+
+                Titulo: %s
+                Autor: %s
+                Número de páginas: %d
+
+            """.formatted(getTitulo(), getAutor(), getNumeroPaginas()));
+    }
+
+    public static void main(String[] args) {
+        Libro libro1 = new Libro();
+        Libro libro2 = new Libro("A traves de mi ventana","",0);
+        libro1.mostrarLibro();
+        libro2.mostrarLibro();
+    }
+    
     @Override
     public String toString() {
         return 

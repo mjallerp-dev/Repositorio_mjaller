@@ -15,9 +15,10 @@ public class PruebaEstudiante {
         e.mostrarNota();
         e2.mostrarNota();
         e.setNotaPromedio(3.8f);
-        e.setNotaPromedio(4.8f);
+        e2.setNotaPromedio(4.8f);
         System.out.println("Nota Actualizada hasta 2do Corte de 2025: ");
         e.mostrarNota();
+        e2.mostrarNota();
 
     }
 }

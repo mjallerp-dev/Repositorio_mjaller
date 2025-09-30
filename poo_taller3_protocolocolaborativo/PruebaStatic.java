@@ -1,7 +1,7 @@
 package repositorio_mjaller.poo_taller3_protocolocolaborativo;
 
-public class PruebaStatic {
-    //private int contador; //Error: non-static variable this cannot be referenced from a static context
+class PruebaStatic {
+    //public int contador; //Error: non-static variable this cannot be referenced from a static context
     static int contador = 0;
 
     public static void incrementar() {
