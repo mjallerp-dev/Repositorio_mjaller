@@ -10,4 +10,23 @@ public class CuentaBancaria {
         this.saldo = saldo;
         this.tipoCuenta = tipoCuenta;
     }
-}
+
+    public double getSaldo() {
+        return this.saldo;
+    }
+    public void setSaldo(double saldo) {
+        if (saldo<0.0) {
+            System.out.println("El saldo no puede ser negativo, se asignara 0 por defecto");
+            this.saldo=0.0;
+        }
+        else
+        this.saldo = saldo;
+    }
+
+    public void mostrarDetalles() {
+        System.out.println("\nDetalles de la Cuenta Bancaria: ");
+        System.out.println("Numero de Cuenta: " + this.numeroCuenta);
+        System.out.println("Tipo de Cuenta: " + this.tipoCuenta);
+        System.out.println("Saldo: " + getSaldo());
+    }
+}    
