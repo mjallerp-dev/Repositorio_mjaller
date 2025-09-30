@@ -25,7 +25,7 @@ public class Empleado {
     }
 
     public void mostrarDetalles() {
-        System.out.println("Datos del Empleado: ");
+        System.out.println("\nDatos del Empleado: ");
         System.out.println("Nombre: " + getNombre());
         System.out.println("Edad: " + getEdad());
     }
