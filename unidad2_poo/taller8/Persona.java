@@ -8,4 +8,10 @@ public class Persona {
         this.nombre = nombre;
         this.edad = edad;
     }
+
+    public void mostrarDatos() {
+        System.out.println("Datos de la Persona: ");
+        System.out.println("Nombre: " + this.nombre);
+        System.out.println("Edad: " + this.edad);
+    }
 }
