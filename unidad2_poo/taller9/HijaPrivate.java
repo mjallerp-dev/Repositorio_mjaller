@@ -20,4 +20,9 @@ public class HijaPrivate extends ClasePrivate {
         System.out.println("Apellido: " + getApellido());
     }
 
+    public static void main(String[] args) {
+        HijaPrivate hija = new HijaPrivate("Miguel", "Jaller");
+        hija.mostrarDetalles();
+    }
+
 }
