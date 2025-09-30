@@ -8,4 +8,10 @@ public class Vehiculo {
         this.marca = marca;
         this.velocidadMaxima = velocidadMaxima;
     }
+
+    public void mostrarDetalles() {
+        System.out.println("\nDetalles del Vehiculo: ");
+        System.out.println("Marca: " + this.marca);
+        System.out.println("Velocidad Maxima: " + this.velocidadMaxima);
+    }
 }
