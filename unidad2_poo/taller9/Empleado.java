@@ -12,4 +12,17 @@ public class Empleado extends Persona {
         return this.departamento;
     }
 
+    @Override
+    public void mostrarDetalles() {
+        super.mostrarDetalles();
+        System.out.println("Departamento: " + getDepartamento());
+    }
+
+    public static void main(String[] args) {
+        Persona persona = new Persona("Miguel", 26);
+        persona.mostrarDetalles();
+        Empleado empleado = new Empleado("Angel", 27, "Sistemas");
+        empleado.mostrarDetalles();
+    }
+
 }
