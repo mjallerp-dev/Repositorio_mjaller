@@ -9,4 +9,16 @@ public class Bicicleta extends Vehiculo {
         this.marca = marca;
         this.color = color;
     }
+
+    public String getMarca() {
+        return this.marca;
+    }
+    public String getColor() {
+        return this.color;
+    }
+
+    @Override
+    public void moverse() {
+        System.out.println("\nLa bicicleta de marca " + getMarca() + " y color " + getColor() + " se mueve a una velocidad de " + getVelocidad() + " km/h.");
+    }
 }
