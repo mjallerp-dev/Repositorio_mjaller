@@ -7,4 +7,10 @@ public class Estudiante extends Persona {
         super(nombre, edad);
         this.matricula = matricula;
     }
+
+    @Override
+    public void mostrarDatos() {
+        super.mostrarDatos();
+        System.out.println("Matrícula: " + this.matricula);
+    }
 }
