@@ -7,4 +7,14 @@ public class Profesor extends Persona {
         super(nombre, edad);
         this.asignatura = asignatura;
     }
+
+    public String getAsignatura() {
+        return this.asignatura;
+    }
+
+    @Override
+    public void presentarse() {
+        super.presentarse();
+        System.out.println("Soy profesor de " + getAsignatura() + ".");
+    }
 }
