@@ -11,8 +11,20 @@ public class Perro extends Animal {
         return this.raza;
     }
 
-    public void sonido() {
+    public void sonidos() {
         super.sonido();
         System.out.println("\nEl " + getEspecie() + " de raza " + getRaza() + " ladra.");
     }
+
+    public static void main(String[] args) {
+        Animal animal1 = new Animal("Gato");
+        animal1.sonido();
+
+        Perro perro1 = new Perro("Perro", "Labrador");
+        perro1.sonido();
+    }
+
+    //No usar @Override es una mala practica porque si puede sobreescribir pero si se escribe mal el metodo no se detecta el error
+    //En un contexto real es mejor usar @Override para darnos cuenta de lo que colocamos mal, ejemplo en este caso colocamos sonidos en vez de sonido
+    //El metodo sonidos no genera error pero no sobreescribe el metodo de la clase padre y el programa funciona mal
 }
