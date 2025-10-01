@@ -12,6 +12,6 @@ public class Animal {
     }
 
     public void sonido() {
-        System.out.println("El" + getEspecie() + "hace un sonido.");
+        System.out.println("El " + getEspecie() + " hace un sonido.");
     }
 }
