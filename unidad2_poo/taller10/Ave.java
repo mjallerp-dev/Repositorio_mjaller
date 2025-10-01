@@ -14,7 +14,12 @@ public class Ave extends Animal {
     }
 
     @Override
-    public void hacerSonido() {
-        System.out.println("El " + getEspecie() + "de Color " + getColor() + "canta.");
+    //public void hacerSonido() {
+    //    System.out.println("El " + getEspecie() + "de Color " + getColor() + "canta.");
+    //}
+    //No se puede sobreescribir el metodo cambiando la firma porque no existe en la clase padre
+    //Solucion: Usar la misma firma o quitar el @Override pero esto ya no seria una sobreescritura
+    public void sonido() {
+        System.out.println("El " + getEspecie() + " de Color " + getColor() + " canta.");
     }
 }
