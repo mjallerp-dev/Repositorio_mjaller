@@ -2,14 +2,13 @@ package taller_11;
 
 public class Circulo extends Figura {
     private double radio;
-    static double pi = 3.1416;
 
     public Circulo(double radio) {
         this.radio = radio;
     }
 
     public double getRadio() {
-        return radio;
+        return this.radio;
     }
     public void setRadio(double radio) {
         if (radio <= 0) {
@@ -17,9 +16,8 @@ public class Circulo extends Figura {
         }else{this.radio = radio;}
     }
 
-    @Override
-    public void calcularArea() {
-        System.out.println("El área del círculo es:" + (pi * radio * radio));
+    public double calcularArea() {
+        double pi = 3.1416;
+        return (pi * radio * radio);
     }
-
 }
