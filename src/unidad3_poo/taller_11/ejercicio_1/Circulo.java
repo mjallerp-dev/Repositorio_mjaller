@@ -1,4 +1,4 @@
-package taller_11;
+package taller_11.ejercicio_1;
 
 public class Circulo extends Figura {
     private double radio;
@@ -16,6 +16,7 @@ public class Circulo extends Figura {
         }else{this.radio = radio;}
     }
 
+    @Override
     public double calcularArea() {
         double pi = 3.1416;
         return (pi * this.radio * this.radio);
