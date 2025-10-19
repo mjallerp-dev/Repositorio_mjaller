@@ -18,6 +18,6 @@ public class Circulo extends Figura {
 
     public double calcularArea() {
         double pi = 3.1416;
-        return (pi * radio * radio);
+        return (pi * this.radio * this.radio);
     }
 }
