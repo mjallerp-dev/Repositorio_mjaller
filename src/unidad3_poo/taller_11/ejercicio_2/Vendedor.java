@@ -44,6 +44,13 @@ public class Vendedor extends Empleado {
 
     @Override
     public double calcularSalario() {
+        System.out.println("""
+            
+            Salario Diario: $%2f
+            Dias trabajados: %d
+            Numero de Ventas: %d
+            
+            """.formatted(getSalarioDiario(),getDiasTrabajados(),getNumeroVentas()));
         return ((getSalarioDiario() * getDiasTrabajados()) + (getNumeroVentas() * comisionPorVenta));
     }
 
