@@ -17,17 +17,19 @@ public class Rectangulo extends Figura {
     }
     public void setBase(double base) {
         if (base <= 0) {
-            System.out.println("El valor de la base es inválido");
+            System.out.println("El valor de la base es inválido, se asignará 1 por defecto");
+            this.base = 1;
         }else{this.base = base;}
     }
     public void setAltura(double altura) {
         if (altura <= 0) {
-            System.out.println("El valor de la altura es inválido");
+            System.out.println("El valor de la altura es inválido, se asignará 1 por defecto");
+            this.altura = 1;
         }else{this.altura = altura;}
     }
 
     @Override
     public double calcularArea() {
-        return (this.base * this.altura);
+        return (getBase()* getAltura());
     }
 }
