@@ -32,6 +32,8 @@ public abstract class Empleado {
     public abstract double calcularSalario();
 
     public void mostrarDetalles() {
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Departamento: " + getDepartamento());
         System.out.println("El salario del empleado es: " + calcularSalario());
     }   
 }
