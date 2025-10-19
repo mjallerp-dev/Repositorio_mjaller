@@ -6,7 +6,8 @@ public class Vendedor extends Empleado {
     private int diasTrabajados;
     double comisionPorVenta = 50000;
 
-    public Vendedor(double salarioDiario, int numeroVentas, int diasTrabajados) {
+    public Vendedor(String nombre, String departamento, double salarioDiario, int numeroVentas, int diasTrabajados) {
+        super(nombre, departamento);
         this.salarioDiario = salarioDiario;
         this.numeroVentas = numeroVentas;
         this.diasTrabajados = diasTrabajados;
