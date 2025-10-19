@@ -18,13 +18,13 @@ public abstract class Empleado {
     
     public void setNombre(String nombre) {
         if (nombre == null || nombre.trim().isEmpty()) {
-            System.out.println("El nombre no puede estar vacío, se asignará 'Desconocido' por defecto");
+            System.out.println("\nEl nombre no puede estar vacío, se asignará 'Desconocido' por defecto");
             this.nombre = "Desconocido";}
         else {this.nombre = nombre;}
     }
     public void setDepartamento(String departamento) {
         if (departamento == null || departamento.trim().isEmpty()) {
-            System.out.println("El departamento no puede estar vacío, se asignará 'Desconocido' por defecto");
+            System.out.println("\nEl departamento no puede estar vacío, se asignará 'Desconocido' por defecto");
             this.departamento = "Desconocido";}
         else {this.departamento = departamento;}
     }
@@ -34,6 +34,7 @@ public abstract class Empleado {
     public void mostrarDetalles() {
         System.out.println("Nombre: " + getNombre());
         System.out.println("Departamento: " + getDepartamento());
-        System.out.println("El salario del empleado es: " + calcularSalario());
+        System.out.println("El salario del empleado es: $" + calcularSalario());
+        System.out.println("_____________________________");
     }   
 }
