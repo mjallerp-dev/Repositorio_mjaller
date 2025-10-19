@@ -1,4 +1,4 @@
-package taller_11;
+package taller_11.ejercicio_1;
 
 public class Rectangulo extends Figura {
     private double base;
@@ -13,5 +13,4 @@ public class Rectangulo extends Figura {
     public double calcularArea() {
         return (this.base * this.altura);
     }
-
 }
