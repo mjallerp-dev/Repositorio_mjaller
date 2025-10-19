@@ -33,6 +33,12 @@ public class Gerente extends Empleado {
 
     @Override
     public double calcularSalario() {
+        System.out.println("""
+            
+            Salario Diario: $%2f
+            Dias trabajados: %d
+                
+            """.formatted(getSalarioDiario(),getDiasTrabajados()));
         return ((getSalarioDiario() * getDiasTrabajados()) + bono);
     }
 
