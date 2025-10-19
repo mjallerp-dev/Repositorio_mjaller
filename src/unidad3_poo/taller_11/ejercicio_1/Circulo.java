@@ -12,13 +12,14 @@ public class Circulo extends Figura {
     }
     public void setRadio(double radio) {
         if (radio <= 0) {
-            System.out.println("El valor del radio es inválido");
+            System.out.println("El valor del radio es inválido, se asignará 1 por defecto");
+            this.radio = 1;
         }else{this.radio = radio;}
     }
 
     @Override
     public double calcularArea() {
         double pi = 3.1416;
-        return (pi * this.radio * this.radio);
+        return (pi * getRadio() * getRadio());
     }
 }
