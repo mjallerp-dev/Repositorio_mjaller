@@ -4,4 +4,8 @@ public abstract class Animal {
 
     public abstract void Alimentarse();
 
+    public void respirar() {
+        System.out.println("El animal está respirando");
+    }
+
 }
