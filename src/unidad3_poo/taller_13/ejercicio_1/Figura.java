@@ -1,4 +1,4 @@
-package taller_13;
+package taller_13.ejercicio_1;
 
 public abstract class Figura {
 
