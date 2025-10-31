@@ -29,4 +29,9 @@ public class Rectangulo extends Figura {
         }else{this.altura = altura;}
     }
 
+    @Override
+    public double calcularArea() {
+        return (getBase()* getAltura());
+    }
+
 }
