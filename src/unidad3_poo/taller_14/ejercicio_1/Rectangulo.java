@@ -35,7 +35,7 @@ public class Rectangulo extends Figura {
 
     @Override
     public void calcularArea() {
-        System.out.println("El area del rectangulo es: " + (base * altura));
+        System.out.println("El area del rectangulo es: " + (getBase() * getAltura()));
     }
 
 }
