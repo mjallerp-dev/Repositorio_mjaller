@@ -29,9 +29,4 @@ public class Empleado extends Persona {
         """.formatted(getNombre(), getEdad(), getDepartamento()));
     }
 
-    @Override
-    public void presentarse() {
-        System.out.println("Hola, mi nombre es" + getNombre() + " y tengo " + getEdad() + " años.");
-    }
-
 }
