@@ -9,6 +9,10 @@ public class Main {
         vehiculo1.mover();
         vehiculo2.mover();
 
+        vehiculo1.setMarca("");
+        vehiculo2.setVelocidadMaxima(-50);
+        vehiculo1.mover();
+        vehiculo2.mover();
     }
 
 }

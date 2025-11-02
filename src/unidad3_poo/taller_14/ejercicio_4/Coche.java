@@ -21,7 +21,7 @@ public class Coche extends Vehiculo {
 
     @Override
     public void mover() {
-        System.out.println("El coche de marca " + getMarca() + ", modelo " + getModelo() + ", se está moviendo a una velocidad máxima de " + getVelocidadMaxima() + " km/h");
+        System.out.println("\nEl coche de marca " + getMarca() + ", modelo " + getModelo() + ", se está moviendo a una velocidad máxima de " + getVelocidadMaxima() + " km/h");
     }
 
 }

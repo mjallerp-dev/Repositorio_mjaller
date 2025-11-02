@@ -21,7 +21,7 @@ public class Bicicleta extends Vehiculo {
 
     @Override
     public void mover() {
-        System.out.println("La bicicleta de marca " + getMarca() + ", de tipo " + getTipo() + ", se está moviendo a una velocidad máxima de " + getVelocidadMaxima() + " km/h");
+        System.out.println("\nLa bicicleta de marca " + getMarca() + ", de tipo " + getTipo() + ", se está moviendo a una velocidad máxima de " + getVelocidadMaxima() + " km/h");
     }
 
 }
