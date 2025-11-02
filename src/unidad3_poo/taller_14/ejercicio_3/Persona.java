@@ -27,4 +27,8 @@ public class Persona {
             this.edad = 0;
         } else {this.edad = edad;}
     }
+
+    public void presentarse() {
+        System.out.println("Hola, mi nombre es" + getNombre() + " y tengo " + getEdad() + " años.");
+    }
 }
