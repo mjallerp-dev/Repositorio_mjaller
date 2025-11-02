@@ -11,6 +11,35 @@ public class Libro {
         this.añoDePublicacion = añoDePublicacion;
     }
 
+    public String getTitulo() {
+        return this.titulo;
+    }
+    public String getAutor() {
+        return this.autor;
+    }
+    public int getañoDePublicacion() {
+        return this.añoDePublicacion;
+    }
+
+    public void setTitulo(String titulo) {
+        if (titulo == null || titulo.trim().isEmpty()) {
+            System.out.println("El título no puede estar vacío, se asignará 'Desconocido' por defecto");
+            this.titulo = "Desconocido";
+        } else {this.titulo = titulo;}
+    }
+    public void setAutor(String autor) {
+        if (autor == null || autor.trim().isEmpty()) {
+            System.out.println("El autor no puede estar vacío, se asignará 'Desconocido' por defecto");
+            this.autor = "Desconocido";
+        } else {this.autor = autor;}
+    }
+    public void setañoDePublicacion(int añoDePublicacion) {
+        if (añoDePublicacion < 1) {
+            System.out.println("El número de páginas es inválido, se asignará 100 por defecto");
+            this.añoDePublicacion = 100;
+        } else {this.añoDePublicacion = añoDePublicacion;}
+    }
+
     public void generarReporte() {
         System.out.println("""
         Reporte del Libro:
@@ -18,11 +47,11 @@ public class Libro {
         Título: %s
         Autor: %s
         Año de Publicación: %d
-        """.formatted(this.titulo, this.autor, this.añoDePublicacion));
+        """.formatted(getTitulo(), getAutor(), getañoDePublicacion()));
     }
 
     public void persistir() {
-        System.out.println("El libro " + this.titulo + " ha sido guardado en la base de datos.");
+        System.out.println("El libro " + getTitulo() + " ha sido guardado en la base de datos.");
     }
 
 }
