@@ -1,4 +1,4 @@
-package taller_14.ejercicio_2;
+package taller_14.ejercicio_3;
 
 public class Persona {
     private String nombre;
@@ -15,7 +15,6 @@ public class Persona {
     public int getEdad() {
         return this.edad;
     }
-
     public void setNombre(String nombre) {
         if (nombre==null || nombre.trim().isEmpty()) {
             System.out.println("El nombre no puede estar vacío, se asignará 'Desconocido' por defecto");
@@ -28,9 +27,4 @@ public class Persona {
             this.edad = 0;
         } else {this.edad = edad;}
     }
-
-    public void presentarse() {
-        System.out.println("Hola, mi nombre es" + getNombre() + " y tengo " + getEdad() + " años.");
-    }
-
 }
