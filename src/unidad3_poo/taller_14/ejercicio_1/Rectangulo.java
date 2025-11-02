@@ -11,10 +11,10 @@ public class Rectangulo extends Figura {
     }
 
     public double getBase() {
-        return base;
+        return this.base;
     }
         public double getAltura() {
-        return altura;
+        return this.altura;
     }
 
     public void setBase(double base) {

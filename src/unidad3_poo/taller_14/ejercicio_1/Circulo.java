@@ -8,7 +8,7 @@ public class Circulo extends Figura {
     }
     
     public double getRadio() {
-        return radio;
+        return this.radio;
     }
     public void setRadio(double radio) {
         if (radio <= 0) {
