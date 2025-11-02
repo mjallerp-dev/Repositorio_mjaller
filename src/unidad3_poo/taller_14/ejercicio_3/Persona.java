@@ -29,6 +29,6 @@ public class Persona {
     }
 
     public void presentarse() {
-        System.out.println("Hola, mi nombre es" + getNombre() + " y tengo " + getEdad() + " años.");
+        System.out.println("Hola, mi nombre es " + getNombre() + " y tengo " + getEdad() + " años.");
     }
 }
