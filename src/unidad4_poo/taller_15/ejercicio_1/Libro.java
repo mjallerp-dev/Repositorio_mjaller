@@ -39,19 +39,5 @@ public class Libro {
             this.añoDePublicacion = 100;
         } else {this.añoDePublicacion = añoDePublicacion;}
     }
-
-    public void generarReporte() {
-        System.out.println("""
-        Reporte del Libro:
-
-        Título: %s
-        Autor: %s
-        Año de Publicación: %d
-        """.formatted(getTitulo(), getAutor(), getañoDePublicacion()));
-    }
-
-    public void persistir() {
-        System.out.println("El libro " + getTitulo() + " ha sido guardado en la base de datos.");
-    }
-
+    
 }
