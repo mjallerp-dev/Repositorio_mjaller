@@ -14,7 +14,7 @@ public class Bicicleta extends Vehiculo {
 
     public void setTipo(String tipo) {
         if (tipo == null || tipo.trim().isEmpty()) {
-            System.out.println("El tipo no puede estar vacío, se asignará 'Desconocida' por defecto");
+            System.out.println("\nEl tipo no puede estar vacío, se asignará 'Desconocida' por defecto");
             this.tipo = "Desconocida";
         } else {this.tipo = tipo;}
     }

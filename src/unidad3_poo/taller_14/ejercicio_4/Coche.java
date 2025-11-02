@@ -14,7 +14,7 @@ public class Coche extends Vehiculo {
 
     public void setModelo(String modelo) {
         if (modelo == null || modelo.trim().isEmpty()) {
-            System.out.println("El modelo no puede estar vacío, se asignará 'Desconocido' por defecto");
+            System.out.println("\nEl modelo no puede estar vacío, se asignará 'Desconocido' por defecto");
             this.modelo = "Desconocido";
         } else {this.modelo = modelo;}
     }

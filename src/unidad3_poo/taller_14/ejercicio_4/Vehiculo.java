@@ -18,19 +18,19 @@ public class Vehiculo {
 
     public void setMarca(String marca) {
         if (marca == null || marca.trim().isEmpty()) {
-            System.out.println("La marca no puede estar vacía, se asignará 'Desconocida' por defecto");
+            System.out.println("\nLa marca no puede estar vacía, se asignará 'Desconocida' por defecto");
             this.marca = "Desconocida";
         } else {this.marca = marca;}
     }
     public void setVelocidadMaxima(int velocidadMaxima) {
         if (velocidadMaxima < 0) {
-            System.out.println("La velocidad máxima es inválida, se asignará 100 por defecto");
-            this.velocidadMaxima = 160;
+            System.out.println("\nLa velocidad máxima es inválida, se asignará 100 por defecto");
+            this.velocidadMaxima = 100;
         } else {this.velocidadMaxima = velocidadMaxima;}
     }
 
     public void mover() {
-        System.out.println("El vehículo se está moviendo");
+        System.out.println("\nEl vehículo se está moviendo");
     }
 
 }
