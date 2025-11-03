@@ -29,10 +29,5 @@ public class Producto {
             this.precioBase = 0;
         } else{this.precioBase = precioBase;}
     }
-
-    public double calcularPrecio() {
-        System.out.println("El precioBase total del producto " + getNombre() + " es:");
-        return getPrecioBase() + (getPrecioBase() * impuesto);
-    }
-
+    
 }
