@@ -10,9 +10,29 @@ public class Producto {
         this.precioBase = precioBase;
     }
 
+    public String getNombre() {
+        return this.nombre;
+    }
+    public double getPrecioBase() {
+        return this.precioBase;
+    }
+
+    public void setNombre(String nombre) {
+        if (nombre == null || nombre.trim().isEmpty()) {
+            System.out.println("El nombre no puede estar vacío, se asignará 'Desconocido' por defecto.");
+            this.nombre = "Desconocido";
+        } else{this.nombre = nombre;}
+    }
+    public void setPrecioBase(double precioBase) {
+        if (precioBase < 0) {
+            System.out.println("El precio no puede ser negativo, se asignará 0 por defecto.");
+            this.precioBase = 0;
+        } else{this.precioBase = precioBase;}
+    }
+
     public double calcularPrecio() {
-        System.out.println("El precioBase total del producto " + this.nombre + " es:");
-        return this.precioBase + (this.precioBase * impuesto);
+        System.out.println("El precioBase total del producto " + getNombre() + " es:");
+        return getPrecioBase() + (getPrecioBase() * impuesto);
     }
 
     public void mostrarEtiqueta() {
@@ -20,7 +40,7 @@ public class Producto {
 
         Nombre del producto: %s
         Precio: %.2f
-        """.formatted(this.nombre, this.precioBase + (this.precioBase * impuesto)));
+        """.formatted(getNombre(), getPrecioBase() + (getPrecioBase() * impuesto)));
     }
 
 }
