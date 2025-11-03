@@ -35,12 +35,4 @@ public class Producto {
         return getPrecioBase() + (getPrecioBase() * impuesto);
     }
 
-    public void mostrarEtiqueta() {
-        System.out.println("""
-
-        Nombre del producto: %s
-        Precio: %.2f
-        """.formatted(getNombre(), getPrecioBase() + (getPrecioBase() * impuesto)));
-    }
-
 }
