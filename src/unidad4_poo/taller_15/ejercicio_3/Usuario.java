@@ -16,16 +16,6 @@ public class Usuario {
         return this.contrasena;
     }
 
-    public boolean autenticar() {
-        if (getEmail().equals("admin") && getcontrasena().equals("12345678")) {
-            System.out.println("Autenticación exitosa.");
-            return true;
-        } else{
-            System.out.println("Error de autenticación: Email y/o contrasena incorrecto/a.");
-            return false;
-        }
-    }
-
     public boolean validar() {
         if (getEmail().contains("@") && getEmail().contains(".") && getcontrasena().length() >= 8) {
             return true;
