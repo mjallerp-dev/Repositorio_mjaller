@@ -9,6 +9,13 @@ public class Usuario {
         this.contraseña = contraseña;
     }
 
+    public String getEmail() {
+        return this.email;
+    }
+    public String getContraseña() {
+        return this.contraseña;
+    }
+
     public boolean autenticar() {
         if (this.email.equals("admin") && this.contraseña.equals("12345678")) {
             System.out.println("Autenticación exitosa.");
