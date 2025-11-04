@@ -1,4 +1,4 @@
-package unidad4_poo.taller_16;
+package unidad4_poo.taller_16.ejercicio_1;
 
 public class DescuentoFijo extends Descuento {
     private double monto;
