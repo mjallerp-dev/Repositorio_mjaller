@@ -1,43 +1,43 @@
 package unidad4_poo.taller_15.ejercicio_3;
 
 public class Usuario {
-    private String email;
-    private String contraseña;
+    private final String email;
+    private final String contrasena;
 
-    public Usuario(String email, String contraseña) {
+    public Usuario(String email, String contrasena) {
         this.email = email;
-        this.contraseña = contraseña;
+        this.contrasena = contrasena;
     }
 
     public String getEmail() {
         return this.email;
     }
-    public String getContraseña() {
-        return this.contraseña;
+    public String getcontrasena() {
+        return this.contrasena;
     }
 
     public boolean autenticar() {
-        if (this.email.equals("admin") && this.contraseña.equals("12345678")) {
+        if (getEmail().equals("admin") && getcontrasena().equals("12345678")) {
             System.out.println("Autenticación exitosa.");
             return true;
         } else{
-            System.out.println("Error de autenticación: Email y/o contraseña incorrecto/a.");
+            System.out.println("Error de autenticación: Email y/o contrasena incorrecto/a.");
             return false;
         }
     }
 
     public boolean validar() {
-        if (this.email.contains("@") && this.email.contains(".") && this.contraseña.length() >= 8) {
+        if (getEmail().contains("@") && getEmail().contains(".") && getcontrasena().length() >= 8) {
             return true;
         } else{
-            if (!this.email.contains("@") && !this.email.contains(".") && this.contraseña.length() < 8) {
-                System.out.println("Email y/o contraseña inválido/a.");
+            if (!getEmail().contains("@") && !getEmail().contains(".") && getcontrasena().length() < 8) {
+                System.out.println("Email y/o contrasena inválido/a.");
             }
-            else if (!this.email.contains("@") && !this.email.contains(".")) {
+            else if (!getEmail().contains("@") && !getEmail().contains(".")) {
                 System.out.println("Error: Email inválido, debe contener '@' y '.'");
             }
-            else if (this.contraseña.length() < 8) {
-                System.out.println("Error: Contraseña inválida, debe tener al menos 8 caracteres.");
+            else if (getcontrasena().length() < 8) {
+                System.out.println("Error: contrasena inválida, debe tener al menos 8 caracteres.");
             }
             return false;
         }
