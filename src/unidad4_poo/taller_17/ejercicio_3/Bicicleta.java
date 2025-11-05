@@ -2,7 +2,7 @@ package unidad4_poo.taller_17.ejercicio_3;
 
 public class Bicicleta extends Transporte {
 
-    public Bicicleta(double velocidadMaxima, String color, int numeroDeMarchas) {
+    public Bicicleta(double velocidadMaxima, String color) {
         super(velocidadMaxima, color);
     }
 
