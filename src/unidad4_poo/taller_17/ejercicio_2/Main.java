@@ -10,9 +10,8 @@ public class Main {
         CuentaBancaria cuenta2 = new CuentaAhorros("Angel Piñeres", "123456789", 2000000, 250000);
         cuenta2.Transferir();
 
-        CuentaAhorros cuenta3 = new CuentaAhorros("Angel Piñeres", "123456789", 2000000, 250000);
+        CuentaAhorros cuenta3 = new CuentaAhorros("Angel Jaller", "123459876", 2000000, 250000);
         cuenta3.Transferir();
         cuenta3.InteresGenerado();
     }
-
 }
