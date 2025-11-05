@@ -9,10 +9,10 @@ public class Rectangulo extends Figura {
         this.altura = altura;
     }
 
-        public double getBase() {
+    public double getBase() {
         return this.base;
     }
-        public double getAltura() {
+    public double getAltura() {
         return this.altura;
     }
 
