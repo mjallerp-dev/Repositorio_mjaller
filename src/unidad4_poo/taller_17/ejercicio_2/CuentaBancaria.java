@@ -1,15 +1,20 @@
 package unidad4_poo.taller_17.ejercicio_2;
 
 public class CuentaBancaria {
+    private String titular;
     private String numeroCuenta;
     private double saldo;
-    private String titular;
     private double monto;
 
-    public CuentaBancaria(String numeroCuenta, double saldo, String titular, double monto) {
+    public CuentaBancaria(String titular, String numeroCuenta, double saldo, double monto) {
+        this.titular = titular;
         this.numeroCuenta = numeroCuenta;
         this.saldo = saldo;
-        this.titular = titular;
+                this.monto = monto;
+    }
+
+    public String getTitular() {
+        return this.titular;
     }
     public String getNumeroCuenta() {
         return this.numeroCuenta;
@@ -17,13 +22,16 @@ public class CuentaBancaria {
     public double getSaldo() {
         return this.saldo;
     }
-    public String getTitular() {
-        return this.titular;
-    }
     public double getMonto() {
         return this.monto;
     }
 
+    public void setTitular(String titular) {
+        if (titular == null || titular.trim().isEmpty()) {
+            System.out.println("El nombre del titular no puede estar vacío, transaccion rechazada.");
+        } else {
+        this.titular = titular;}
+    }
     public void setNumeroCuenta(String numeroCuenta) {
         if (numeroCuenta == null || numeroCuenta.trim().isEmpty()) {
             System.out.println("El número de cuenta no puede estar vacío, transaccion rechazada.");
@@ -36,12 +44,6 @@ public class CuentaBancaria {
         } else {
         this.saldo = saldo;}
     }
-    public void setTitular(String titular) {
-        if (titular == null || titular.trim().isEmpty()) {
-            System.out.println("El nombre del titular no puede estar vacío, transaccion rechazada.");
-        } else {
-        this.titular = titular;}
-    }
     public void setMonto(double monto) {
         if (monto < 0) {
             System.out.println("El monto no puede ser negativo, transaccion rechazada.");
@@ -50,7 +52,10 @@ public class CuentaBancaria {
     }
 
     public void Transferir(){
+        double saldoactualizado = getSaldo() - getMonto();
         System.out.println("""
+
+            Saldo actual: %.2f
             
             Realizando transferencia...
 
@@ -58,10 +63,10 @@ public class CuentaBancaria {
             Titular: %s
             Monto: %.2f
 
-            Saldo actualizado: %.2f - %.2f 
+            Saldo actualizado: %.2f
 
                 
-            """.formatted(getNumeroCuenta(), getTitular(), getMonto(), getSaldo(), getMonto()));
+            """.formatted(getSaldo(), getNumeroCuenta(), getTitular(), getMonto(), saldoactualizado));
     }
 
 }
