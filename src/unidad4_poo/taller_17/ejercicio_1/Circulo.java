@@ -12,8 +12,11 @@ public class Circulo extends Figura {
     }
 
     public void setRadio(double radio) {
-        this.radio = radio;
-    }
+        if (radio < 0) {
+            System.out.println("El radio no puede ser negativo, se asignará '1' por defecto.");
+        } else {
+            this.radio = radio;}
+        }
 
     @Override
     public double calcularArea() {
