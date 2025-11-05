@@ -49,7 +49,7 @@ public class CuentaBancaria {
         this.monto = monto;}
     }
 
-    public void Transferencia(){
+    public void Transferir(){
         System.out.println("""
             
             Realizando transferencia...
@@ -58,10 +58,10 @@ public class CuentaBancaria {
             Titular: %s
             Monto: %.2f
 
-            Saldo actualizado: %.2f
+            Saldo actualizado: %.2f - %.2f 
 
                 
-            """.formatted(getNumeroCuenta(), getTitular(), getMonto(), getSaldo()));
+            """.formatted(getNumeroCuenta(), getTitular(), getMonto(), getSaldo(), getMonto()));
     }
 
 }
