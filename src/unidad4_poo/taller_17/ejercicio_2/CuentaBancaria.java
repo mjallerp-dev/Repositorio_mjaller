@@ -10,7 +10,7 @@ public class CuentaBancaria {
         this.titular = titular;
         this.numeroCuenta = numeroCuenta;
         this.saldo = saldo;
-                this.monto = monto;
+        this.monto = monto;
     }
 
     public String getTitular() {
@@ -40,19 +40,19 @@ public class CuentaBancaria {
     }
     public void setSaldo(double saldo) {
         if (saldo < 0) {
-            System.out.println("El saldo no puede ser negativo, transaccion rechazada.");
+            System.out.println("Saldo insuficiente, transaccion rechazada.");
         } else {
         this.saldo = saldo;}
     }
     public void setMonto(double monto) {
-        if (monto < 0) {
-            System.out.println("El monto no puede ser negativo, transaccion rechazada.");
+        if (monto > saldo) {
+            System.out.println("Saldo insuficiente, transaccion rechazada.");
         } else {
         this.monto = monto;}
     }
 
     public void Transferir(){
-        double saldoactualizado = getSaldo() - getMonto();
+        double saldoActualizado = getSaldo() - getMonto();
         System.out.println("""
 
             Saldo actual: %.2f
@@ -64,9 +64,8 @@ public class CuentaBancaria {
             Monto: %.2f
 
             Saldo actualizado: %.2f
-
-                
-            """.formatted(getSaldo(), getNumeroCuenta(), getTitular(), getMonto(), saldoactualizado));
+               
+            """.formatted(getSaldo(), getNumeroCuenta(), getTitular(), getMonto(), saldoActualizado));
     }
 
 }
