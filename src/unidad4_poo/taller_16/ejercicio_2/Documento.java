@@ -20,11 +20,6 @@ public abstract class Documento {
         }
     }
 
-    public void exportarPDF() {
-        System.out.println("""
+    public abstract void exportar(String fileName);
 
-            Exportando %s como PDF...
-            %s.pdf exportado exitosamente.
-            """.formatted(this.fileName));
-    }
 }
