@@ -30,7 +30,7 @@ public class Transporte {
         this.color = color;}
     }
 
-    public void moviendo() {
+    public void mover() {
         System.out.println("El transporte de color " + getColor() + "se está moviendo a una velocidad máxima de " + getVelocidadMaxima() + " km/h.");
     }
 
