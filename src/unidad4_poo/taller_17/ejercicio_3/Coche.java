@@ -2,7 +2,7 @@ package unidad4_poo.taller_17.ejercicio_3;
 
 public class Coche extends Transporte {
 
-    public Coche(double velocidadMaxima, String color, int numeroDePuertas) {
+    public Coche(double velocidadMaxima, String color) {
         super(velocidadMaxima, color);
     }
 
