@@ -4,7 +4,7 @@ public class ReporteExcel implements GeneradorReporte {
 
     @Override
     public void generarReporte(String nombreReporte){
-        System.out.println("Reporte " + nombreReporte + ".xlsx generado con éxito");
+        System.out.println("nReporte " + nombreReporte + ".xlsx generado con éxito");
     }
 
 }

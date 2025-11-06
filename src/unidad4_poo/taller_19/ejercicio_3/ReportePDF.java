@@ -4,7 +4,7 @@ public class ReportePDF implements GeneradorReporte {
 
     @Override
     public void generarReporte(String nombreReporte){
-        System.out.println("Reporte " + nombreReporte + ".pdf generado con éxito");
+        System.out.println("nReporte " + nombreReporte + ".pdf generado con éxito");
     }
 
 }
