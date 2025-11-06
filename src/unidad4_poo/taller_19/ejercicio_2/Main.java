@@ -6,11 +6,13 @@ public class Main {
         
         Almacenamiento almacenamientoLocal = new AlmacenamientoLocal();
         GestorArchivos gestorArchivos = new GestorArchivos(almacenamientoLocal);
-        gestorArchivos.generar("pdf", "Documentos");
+        gestorArchivos.guardar("Archivo.csv", "Documentos");
+        gestorArchivos.recuperar("ArchivoBorrado.xlsx", "Papelera de Reciclaje");
 
         Almacenamiento almacenamientoNube = new AlmacenamientoNube();
         gestorArchivos = new GestorArchivos(almacenamientoNube);
-        gestorArchivos.generar("xlsx", "Reportes Excel OneDrive");
+        gestorArchivos.guardar("Documento.pdf", "Documentos de OneDrive");
+        gestorArchivos.recuperar("DocumentoBorrado.docx", "Papelera de Gooogle Drive");
         
     }
 

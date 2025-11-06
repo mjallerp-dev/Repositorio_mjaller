@@ -7,7 +7,11 @@ public class GestorArchivos {
         this.almacenamiento = almacenamiento;
     }
 
-    public void generar(String tipoReporte, String carpetaDestino){
-        almacenamiento.generarReporte(tipoReporte, carpetaDestino);
+    public void guardar(String nombreArchivo, String carpetaDestino){
+        almacenamiento.guardarArchivo(nombreArchivo, carpetaDestino);
+    }
+
+    public void recuperar(String nombreArchivo, String carpetaOrigen){
+        almacenamiento.recuperarArchivo(nombreArchivo, carpetaOrigen);
     }
 }
