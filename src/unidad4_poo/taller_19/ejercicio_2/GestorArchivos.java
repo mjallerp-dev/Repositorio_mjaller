@@ -1,7 +1,7 @@
 package unidad4_poo.taller_19.ejercicio_2;
 
 public class GestorArchivos {
-    private Almacenamiento almacenamiento;
+    private final Almacenamiento almacenamiento;
 
     public GestorArchivos(Almacenamiento almacenamiento) {
         this.almacenamiento = almacenamiento;

@@ -1,7 +1,7 @@
 package unidad4_poo.taller_19.ejercicio_1;
 
 public class GestorAutenticacion {
-    private ServicioAutenticacion servicioAutenticacion;
+    private final ServicioAutenticacion servicioAutenticacion;
 
     public GestorAutenticacion (ServicioAutenticacion servicioAutenticacion){
         this.servicioAutenticacion = servicioAutenticacion;
