@@ -2,6 +2,6 @@ package unidad4_poo.taller_18.ejercicio_2;
 
 public interface Transferencia {
 
-    void transferir();
+    void transferir(double monto, String cuentaDestino);
 
 }
