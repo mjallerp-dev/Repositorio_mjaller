@@ -8,7 +8,7 @@ public class Main {
 
         System.out.println("\nÁrea del circulo: ");
         circulo.mostrarArea();
-        System.out.println("\nÁrea del circulo: ");
+        System.out.println("\nÁrea del Rectangulo: ");
         rectangulo.mostrarArea();
         System.out.println("\n_________________________________");
         circulo.setRadio(-2);
