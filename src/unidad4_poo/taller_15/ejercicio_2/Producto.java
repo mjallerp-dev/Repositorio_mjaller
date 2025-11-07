@@ -33,4 +33,15 @@ public class Producto {
     public void calcularPrecio(Producto p) {
         System.out.println("Precio de " + p.getNombre() + ":" + p.getPrecioBase() * (1 + Producto.impuesto));
     }
+
+    public void mostrarDatos(){
+        System.out.println("""
+
+            Nombre del producto: %s
+            Precio Base: %.2f
+            Impuesto: 19%
+            Precio: %.2f
+
+            """.formatted(getNombre(), getPrecioBase(), getPrecioBase() * (1 + Producto.impuesto)));
+    }
 }

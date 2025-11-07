@@ -8,8 +8,9 @@ public class ReporteFunction {
 
         Título: %s
         Autor: %s
-        Año de Publicación: %d
-        """.formatted(libro.getTitulo(), libro.getAutor(), libro.getañoDePublicacion()));
+        Numero de Paginas: %d
+
+        """.formatted(libro.getTitulo(), libro.getAutor(), libro.getNumeroPaginas()));
     }
 
 }

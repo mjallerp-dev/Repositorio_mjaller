@@ -15,4 +15,16 @@ public class Usuario {
     public String getcontrasena() {
         return this.contrasena;
     }
+
+    public void mostrarDatos() {
+        System.out.println("""
+
+            Datos del usuario:
+
+            Email: %s
+            Contraseña: %s
+
+                   
+            """.formatted(getEmail(),getcontrasena()));
+    }
 }

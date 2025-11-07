@@ -3,12 +3,12 @@ package unidad4_poo.taller_15.ejercicio_1;
 public class Libro {
     private String titulo;
     private String autor;
-    private int añoDePublicacion;
+    private int numeroPaginas;
 
-    public Libro(String titulo, String autor, int añoDePublicacion) {
+    public Libro(String titulo, String autor, int numeroPaginas) {
         this.titulo = titulo;
         this.autor = autor;
-        this.añoDePublicacion = añoDePublicacion;
+        this.numeroPaginas = numeroPaginas;
     }
 
     public String getTitulo() {
@@ -17,8 +17,8 @@ public class Libro {
     public String getAutor() {
         return this.autor;
     }
-    public int getañoDePublicacion() {
-        return this.añoDePublicacion;
+    public int getNumeroPaginas() {
+        return this.numeroPaginas;
     }
 
     public void setTitulo(String titulo) {
@@ -33,11 +33,23 @@ public class Libro {
             this.autor = "Desconocido";
         } else {this.autor = autor;}
     }
-    public void setañoDePublicacion(int añoDePublicacion) {
-        if (añoDePublicacion < 1) {
-            System.out.println("El número de páginas es inválido, se asignará 100 por defecto");
-            this.añoDePublicacion = 100;
-        } else {this.añoDePublicacion = añoDePublicacion;}
+    public void setNumeroPaginas(int numeroPaginas) {
+        if (numeroPaginas < 0) {
+            System.out.println("El número de páginas es inválido, se asignará 1 por defecto");
+            this.numeroPaginas = 1;
+        } else {this.numeroPaginas = numeroPaginas;}
+    }
+
+
+    public void mostrarInfo(Libro libro) {
+        System.out.println("""
+        Información del Libro:
+
+        Título: %s
+        Autor: %s
+        Numero de Paginas: %d
+
+        """.formatted(libro.getTitulo(), libro.getAutor(), libro.getNumeroPaginas()));
     }
 
 }
