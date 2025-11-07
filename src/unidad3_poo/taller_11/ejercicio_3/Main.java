@@ -4,10 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
         
-        Animal animal = new Animal();
-
-        animal.Alimentarse();
+        //Animal animal = new Animal();
+        AnimalCarnivoro animalCarnivoro = new AnimalCarnivoro();
+        AnimalHerbivoro animalHerbivoro = new AnimalHerbivoro();
+        animalCarnivoro.Alimentarse();
+        animalHerbivoro.respirar();
 
     }
-
 }

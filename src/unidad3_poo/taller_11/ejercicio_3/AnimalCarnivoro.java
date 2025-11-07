@@ -4,7 +4,7 @@ public class AnimalCarnivoro extends Animal {
     
     @Override
     public void Alimentarse() {
-        System.out.println("El animal Carnivoro se alimenta de Carne");
+        System.out.println("\nEl animal Carnivoro se alimenta de Carne");
     }
 
 }
