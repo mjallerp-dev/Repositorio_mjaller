@@ -1,45 +1,33 @@
 package taller_11.ejercicio_2;
 
 public class Vendedor extends Empleado {
-    private double salarioDiario;
     private int numeroVentas;
-    private int diasTrabajados;
-    double comisionPorVenta = 50000;
+    private double comisionPorVenta;
 
-    public Vendedor(String nombre, String departamento, double salarioDiario, int numeroVentas, int diasTrabajados) {
-        super(nombre, departamento);
-        this.salarioDiario = salarioDiario;
-        this.numeroVentas = numeroVentas;
-        this.diasTrabajados = diasTrabajados;
+    public Vendedor(String nombre, String departamento, double salarioDiario, int numeroVentas, int diasTrabajados, double comisionPorVenta) {
+        super(nombre,departamento, salarioDiario, diasTrabajados);
+        this.numeroVentas= numeroVentas;
+        this.comisionPorVenta = comisionPorVenta;
     }
-
-    public double getSalarioDiario() {
-        return this.salarioDiario;
-    }
+    
     public int getNumeroVentas() {
         return this.numeroVentas;
     }
-    public int getDiasTrabajados() {
-        return this.diasTrabajados;
+    public double getComisionProVentas() {
+        return this.comisionPorVenta;
     }
 
-    public void setSalarioDiario(double salarioDiario) {
-        if (salarioDiario < 47450) {
-            System.out.println("\nEl salario minimo diario es de $47450, se asignará este valor por defecto");
-            this.salarioDiario = 47450;
-        }else{this.salarioDiario = salarioDiario;}
-    }
     public void setNumeroVentas(int numeroVentas) {
         if (numeroVentas < 0) {
             System.out.println("\nEl número de ventas no puede ser negativo, se asignará 0 por defecto");
             this.numeroVentas = 0;
         }else{this.numeroVentas = numeroVentas;}
     }
-    public void setDiasTrabajados(int diasTrabajados) {
-        if (diasTrabajados < 0) {
-            System.out.println("\nLos días trabajados no pueden ser negativos, se asignará 1 por defecto");
-            this.diasTrabajados = 1;
-        }else{this.diasTrabajados = diasTrabajados;}
+    public void setComisionPorVenta (double comisionPorVenta) {
+        if (comisionPorVenta < 50000) {
+            System.out.println("\nLa comision por venta debe ser minimo de $50.000, se asignará este valor por defecto");
+            this.comisionPorVenta = 50000;
+        }else{this.comisionPorVenta = comisionPorVenta;}
     }
 
     @Override
@@ -49,7 +37,7 @@ public class Vendedor extends Empleado {
             Dias trabajados: %d
             Numero de Ventas: %d
             """.formatted(getSalarioDiario(),getDiasTrabajados(),getNumeroVentas()));
-        return ((getSalarioDiario() * getDiasTrabajados()) + (getNumeroVentas() * comisionPorVenta));
+        return ((getSalarioDiario() * getDiasTrabajados()) + (getNumeroVentas() * getComisionProVentas()));
     }
 
 }

@@ -1,34 +1,21 @@
 package taller_11.ejercicio_2;
 
 public class Gerente extends Empleado {
-    private double salarioDiario;
-    private int diasTrabajados;
-    double bono = 1000000;
+    private double bono;
 
-    public Gerente(String nombre, String departamento, double salarioDiario, int diasTrabajados) {
-        super(nombre, departamento);
-        this.salarioDiario = salarioDiario;
-        this.diasTrabajados = diasTrabajados;
+    public Gerente(String nombre, String departamento, double salarioDiario, int diasTrabajados, double bono) {
+        super(nombre,departamento, salarioDiario, diasTrabajados);
+        this.bono = bono;
     }
 
-    public double getSalarioDiario() {
-        return this.salarioDiario;
+    public double getBono() {
+        return this.bono;
     }
-    public int getDiasTrabajados() {
-        return this.diasTrabajados;
-    }
-
-    public void setSalarioDiario(double salarioDiario) {
-        if (salarioDiario < 47450) {
-            System.out.println("\nEl salario minimo diario es de $47450, se asignará este valor por defecto");
-            this.salarioDiario = 47450;
-        }else{this.salarioDiario = salarioDiario;}
-    }
-    public void setDiasTrabajados(int diasTrabajados) {
-        if (diasTrabajados < 0) {
-            System.out.println("\nLos días trabajados no pueden ser negativos, se asignará 1 por defecto");
-            this.diasTrabajados = 1;
-        }else{this.diasTrabajados = diasTrabajados;}
+    public void setBono(double bono){
+        if (bono < 1000000) {
+            System.out.println("\nEl bono minimo es de $1.000.000, se asignará este valor por defecto");
+            this.bono = 1000000;
+        } else{this.bono = bono;}
     }
 
     @Override
@@ -36,9 +23,10 @@ public class Gerente extends Empleado {
         System.out.println("""
             Salario Diario: $%.2f
             Dias trabajados: %d
-            Bono: $1000000
-            """.formatted(getSalarioDiario(),getDiasTrabajados()));
-        return ((getSalarioDiario() * getDiasTrabajados()) + bono);
+            Bono: $%.2f
+            
+            """.formatted(getSalarioDiario(),getDiasTrabajados(),getBono()));
+        return ((getSalarioDiario() * getDiasTrabajados()) + getBono());
     }
 
 }
