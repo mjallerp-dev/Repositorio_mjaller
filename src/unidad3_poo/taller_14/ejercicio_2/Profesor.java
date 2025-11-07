@@ -9,10 +9,14 @@ public class Profesor extends Persona {
     }
 
     public String getAsignatura() {
-        return asignatura;
+        return this.asignatura;
     }
     public void setAsignatura(String asignatura) {
-        this.asignatura = asignatura;
+        if (asignatura == null || asignatura.trim().isEmpty()){
+            System.out.println("La asignatura no puede estar vacía, se asiganará 'Desconocida' en su lugar");
+            this.asignatura = "Desconocida";
+        } else {
+        this.asignatura = asignatura;}
     }
 
     @Override

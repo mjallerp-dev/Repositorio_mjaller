@@ -13,7 +13,7 @@ public class Rectangulo extends Figura {
     public double getBase() {
         return this.base;
     }
-        public double getAltura() {
+    public double getAltura() {
         return this.altura;
     }
 

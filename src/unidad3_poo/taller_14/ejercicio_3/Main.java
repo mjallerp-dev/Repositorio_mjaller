@@ -3,6 +3,7 @@ package taller_14.ejercicio_3;
 public class Main {
 
     public static void main(String[] args) {
+
         //Persona persona1 = new Empleado("Ana", 20, "Ingeniería");
         //persona1.mostrarDetalles();
 

@@ -3,7 +3,7 @@ package unidad4_poo.taller_15.ejercicio_3;
 public class Main {
 
     public static void main(String[] args) {
-        Usuario usuario1 = new Usuario("admin@mail.com", "12345678");
+        Usuario usuario1 = new Usuario("admi@mail.com", "12345687");
 
         ValidationService validationService = new ValidationService();
         AutenticationService autenticationService = new AutenticationService();

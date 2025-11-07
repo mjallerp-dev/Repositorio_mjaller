@@ -25,7 +25,7 @@ public class Persona {
     public void setEdad(int edad) {
         if (edad < 0) {
             System.out.println("La edad es inválida, se asignará 1 por defecto");
-            this.edad = 0;
+            this.edad = 1;
         } else {this.edad = edad;}
     }
 

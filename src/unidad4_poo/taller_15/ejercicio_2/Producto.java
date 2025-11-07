@@ -30,4 +30,7 @@ public class Producto {
         } else{this.precioBase = precioBase;}
     }
     
+    public void calcularPrecio(Producto p) {
+        System.out.println("Precio de " + p.getNombre() + ":" + p.getPrecioBase() * (1 + Producto.impuesto));
+    }
 }
