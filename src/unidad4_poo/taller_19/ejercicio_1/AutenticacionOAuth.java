@@ -1,6 +1,6 @@
 package unidad4_poo.taller_19.ejercicio_1;
 
-public class AutentiacionOAuth implements ServicioAutenticacion {
+public class AutenticacionOAuth implements ServicioAutenticacion {
 
     @Override
     public boolean autenticarUsuario(String email, String contrasena){

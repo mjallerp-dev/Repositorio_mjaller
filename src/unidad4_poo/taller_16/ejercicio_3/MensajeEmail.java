@@ -7,6 +7,4 @@ public class MensajeEmail extends Mensajero {
         System.out.println("Enviando Email: " + mensaje);
     }
 
-
-
 }

@@ -11,8 +11,6 @@ public class AutenticacionLocal implements ServicioAutenticacion {
         else {
             System.out.println("Autenticacion fallida.");
             return false;
-        }
-        
+        } 
     }   
-
 }

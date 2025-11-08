@@ -8,7 +8,7 @@ public class Main {
         GestorAutenticacion gestorAutenticacion = new GestorAutenticacion(autenticacionLocal);
         gestorAutenticacion.autenticar("admin@mail.com", "12345678");
 
-        ServicioAutenticacion autenticacionOAuth = new AutentiacionOAuth();
+        ServicioAutenticacion autenticacionOAuth = new AutenticacionOAuth();
         gestorAutenticacion = new GestorAutenticacion(autenticacionOAuth);
         gestorAutenticacion.autenticar("admin@google.com","123456");
 

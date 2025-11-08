@@ -14,6 +14,7 @@ public class Circulo extends Figura {
     public void setRadio(double radio) {
         if (radio < 0) {
             System.out.println("El radio no puede ser negativo, se asignará '1' por defecto.");
+            this.radio = 1;
         } else {
             this.radio = radio;}
         }
