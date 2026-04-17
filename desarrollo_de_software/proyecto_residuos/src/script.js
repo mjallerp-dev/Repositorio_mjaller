@@ -7,13 +7,13 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const formRegistro = document.getElementById('form-registro');
+    const formRegistro = document.getElementById('registroForm');
     
     if (formRegistro) {
         formRegistro.addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            const mensajeDiv = document.getElementById('mensaje-respuesta');
+            const mensajeDiv = document.getElementById('mensaje');
             const formData = new FormData();
             
 
