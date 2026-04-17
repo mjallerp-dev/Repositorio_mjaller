@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empresas | Gestión de Residuos</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f0f2f5; /* Un gris muy claro para resaltar la tarjeta */
+        }
+        .card {
+            border-radius: 15px; /* Bordes redondeados más modernos */
+        }
+        .btn-success {
+            background-color: #218838;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            
+            <div class="card p-4 shadow-lg">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold text-success">EcoRegistro</h2>
+                    <p class="text-muted">Sistema de Gestión de Residuos</p>
+                </div>
+
+                <form id="registroForm">
+                    
+                    <div class="mb-3">
+                        <label for="nit" class="form-label text-secondary fw-bold">NIT de la Empresa</label>
+                        <input type="text" class="form-control" id="nit" placeholder="Ej: 900123456" required>
+                        <div class="form-text">Sin puntos, guiones ni dígito de verificación.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="razon_social" class="form-label text-secondary fw-bold">Razón Social</label>
+                        <input type="text" class="form-control" id="razon_social" placeholder="Nombre legal de la empresa" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="correo" class="form-label text-secondary fw-bold">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correo" placeholder="correo@empresa.com" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label text-secondary fw-bold">Contraseña</label>
+                        <input type="password" id="password" class="form-control" required>
+                        <div class="form-text small">Mínimo 8 caracteres, incluya mayúsculas y números.</div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="rol" class="form-label text-secondary fw-bold">Tipo de Empresa</label>
+                        <select class="form-select" id="rol" required>
+                            <option value="" selected disabled>Seleccione su rol operativo...</option>
+                            <option value="Productora">1. Productora</option>
+                            <option value="Transportista">2. Transportista</option>
+                            <option value="Receptora de Residuos">3. Receptora de Residuos</option>
+                            <option value="Entidad Ambiental">4. Entidad Ambiental</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100 fw-bold py-2 shadow-sm">
+                        FINALIZAR REGISTRO
+                    </button>
+                </form>
+
+                <div id="mensaje" class="mt-3 text-center fw-bold"></div>
+            </div>
+
+            <p class="text-center mt-4 text-muted small">© 2026 Software de Gestión de Residuos. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
