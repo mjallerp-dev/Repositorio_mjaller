@@ -58,7 +58,7 @@ def registrar():
             "url_documento": url_publica
         }
         
-        res = supabase.table("empresas").insert(datos_registro).execute()
+        res = supabase.table("enterprise").insert(datos_registro).execute()
 
         return jsonify({"mensaje": "Solicitud de registro enviada exitosamente."}), 200
 
