@@ -33,13 +33,13 @@ def registrar_empresa():
         cur = conn.cursor()
 
         query = """
-        INSERT INTO enterprise (nit, razon_social, correo, password_hash, rol)
+        INSERT INTO enterprise (nit, razon_social, correo, password, rol)
         VALUES (%s, %s, %s, %s, %s);
         """
         cur.execute(query, (nit, razon_social, correo, password_hash, rol))
         
         conn.commit()
-        print(f"\Empresa '{razon_social}' registrada exitosamente.")
+        print(f"\nEmpresa '{razon_social}' registrada exitosamente.")
         print("Estado: Pendiente de Validación")
 
     except psycopg2.IntegrityError:
